@@ -46,7 +46,8 @@ digraph where_it_sits {
 
 </details>
 
-- **It measures the members:** a case names the version of the method it was run with, by commit.
+- **It measures the members:** a case names the version of the method it was run with, by commit, and says whether
+  the reasoning went through [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint), the bridge.
 - **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) and runs its checks in CI.
 - **It links down only.** [ai-augmented-foundations](https://github.com/Tewf/ai-augmented-foundations) reads the cases; no
   case depends on it. The family's map is [ai-augmented](https://github.com/Tewf/ai-augmented).

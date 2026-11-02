@@ -46,7 +46,8 @@ digraph where_it_sits {
 
 </details>
 
-- **Il mesure les membres :** un cas nomme la version de la méthode avec laquelle il a été mené, par commit.
+- **Il mesure les membres :** un cas nomme la version de la méthode avec laquelle il a été mené, par commit, et dit si
+  le raisonnement est passé par [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint), le pont.
 - **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) et exécute ses vérifications en CI.
 - **Il ne pointe que vers le bas.** [ai-augmented-foundations](https://github.com/Tewf/ai-augmented-foundations) lit les cas ;
   aucun cas n'en dépend. La carte de la famille est [ai-augmented](https://github.com/Tewf/ai-augmented).
