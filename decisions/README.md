@@ -8,6 +8,7 @@ decision in one sentence under its title, then its status, context, decision and
 | Record | Summary |
 |---|---|
 | [0001 A repository of its own](0001-a-repository-of-its-own.md) | The measured record of each real project run with the method is one problem, so it is one repository, set up before any work on it |
+| [0002 A case meets the reader's checklist of Runeson 2009](0002-a-case-meets-the-readers-checklist.md) | A case is an experience report with repository measures, held to the 12-item reader's checklist, with a program for every count a program can take |
 
 ## See also
 
