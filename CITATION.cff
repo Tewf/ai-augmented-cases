@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: >-
+  If this repository helps you, you may cite it as below. It is an informal,
+  work-in-progress synthesis of published research, written with Claude, an AI
+  assistant by Anthropic. It is not an official standard, not peer-reviewed,
+  and not a new result.
+title: "ai-augmented-cases (work in progress)"
+abstract: >-
+  One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. Scope only; the first case, the day six repositories were built at once, is not written.
+type: software
+authors:
+  - name: "Tewf"
+repository-code: "https://github.com/Tewf/ai-augmented-cases"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+keywords:
+  - case study
+  - experience report
+  - mining software repositories
+  - AI-augmented work
+  - literature review
