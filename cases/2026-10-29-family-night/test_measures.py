@@ -49,6 +49,21 @@ class Measures(unittest.TestCase):
                          {"a.md", "decisions/0001-x.md", "b.md"})
 
 
+class Repos(unittest.TestCase):
+    def test_repos_option_names_the_checkouts(self):
+        with tempfile.TemporaryDirectory() as root:
+            for name in ("one", "two"):
+                repo = Path(root) / name
+                repo.mkdir()
+                run(repo, "init", "-q")
+                (repo / "f.md").write_text(name)
+                run(repo, "add", "-A")
+                run(repo, "commit", "-q", "-m", name, when="2026-11-02T10:00:00+01:00")
+            per, distinct, work = measures.measure(root, "2026-11-02", measures.parse_offset("+01:00"), ["one", "two"])
+            self.assertEqual(list(per), ["one", "two"])
+            self.assertEqual((per["one"]["commits"], distinct, work), (1, 2, 2))
+
+
 class Moves(unittest.TestCase):
     def test_slug(self):
         self.assertTrue(measures.is_move("decisions/0006-move-to-reader-ergonomics-v1.1.1.md"))

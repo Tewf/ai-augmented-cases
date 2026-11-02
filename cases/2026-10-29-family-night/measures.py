@@ -2,9 +2,9 @@
 """Measures of the case "family night": what git history alone says about one day.
 
 Usage:
-    python3 measures.py --root DIR [--day 2026-10-29] [--offset +01:00] [--json FILE]
+    python3 measures.py --root DIR [--repos NAME ...] [--day 2026-10-29] [--offset +01:00] [--json FILE]
 
-DIR holds a checkout of each repository named in REPOSITORIES, side by side.
+DIR holds a checkout of each repository named in REPOSITORIES, or in --repos, side by side.
 The program only reads: it runs `git log` and `git tag`, nothing else.
 
 What it measures, per repository, for the local day:
@@ -111,11 +111,11 @@ def tags_on_day(repo, day, tz):
     return sorted(found, key=lambda t: t[1])
 
 
-def measure(root, day, tz):
+def measure(root, day, tz, names=REPOSITORIES):
     per = {}
     by_hash = defaultdict(set)
     by_key = defaultdict(set)
-    for name in REPOSITORIES:
+    for name in names:
         repo = Path(root) / name
         commits = read_commits(repo, tz)
         today = [c for c in commits if c["committer"].date().isoformat() == day]
@@ -179,13 +179,14 @@ def table(per):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", required=True, help="folder holding the checkouts side by side")
+    ap.add_argument("--repos", nargs="+", help="repository names to measure; default: the seven of the first case")
     ap.add_argument("--day", default="2026-10-29")
     ap.add_argument("--offset", default="+01:00", help="UTC offset that defines the day")
     ap.add_argument("--hand", default=str(Path(__file__).with_name("hand-counts.csv")))
     ap.add_argument("--json", help="also write the numbers to this file")
     args = ap.parse_args(argv)
     tz = parse_offset(args.offset)
-    per, distinct, work = measure(args.root, args.day, tz)
+    per, distinct, work = measure(args.root, args.day, tz, args.repos or REPOSITORIES)
     print(f"Day {args.day}, offset {args.offset}\n")
     print(table(per))
     total = sum(r["commits"] for r in per.values())
