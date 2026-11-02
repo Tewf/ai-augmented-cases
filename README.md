@@ -10,8 +10,9 @@ happened when someone did.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** the first review is written (a first pass, 37 sources) and names its baseline; the first case,
-> the day six repositories were built at once, 2026-10-29, is written with a program that takes its counts. The name
+> **Status (2026-11-02):** the first review is written (a first pass, 37 sources) and names its baseline; two cases
+> are written with a program that takes their counts: the day six repositories were built at once, 2026-10-29, and the
+> night eight repositories had their first job, 2026-11-02. The name
 > stays provisional. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -81,7 +82,8 @@ The reader's checklist of Runeson 2009, 12 items, read with the experience-repor
 - **From the history alone.** A program can take commits, files, tags and decision records per day. It cannot take questions that reached the person, nor tell a commit from a unit of work.
 - **Trust.** What is quoted, counted and left out is said in the case; its shape is [shapes/case.md](shapes/case.md).
 - **The first case.** [The day of 2026-10-29](cases/2026-10-29-family-night/README.md): 434 commits, 50 tags, 47 records; 16 decisions reached the person, counted by hand.
-- **Comparison.** There is no control. A case is compared with the method's earlier cases, and with a contrast inside the case; the first case has no earlier one.
+- **Comparison.** There is no control. A case is compared with the method's earlier cases, and with a contrast inside the case; the first case has no earlier one, and the second is compared with it only in kind.
+- **The second case.** [The night of 2026-11-02](cases/2026-11-02-eight-first-jobs/README.md): 33 commits over eight repositories, 16 records, no tags; 6 decisions reached the person and 5 owner runs stalled and were resumed, counted by hand. The program cannot count the person's messages, the stalls, the returns or the pushes.
 
 ## Check it
 

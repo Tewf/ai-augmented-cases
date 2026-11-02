@@ -10,9 +10,9 @@ celui-ci consigne ce qui s'est passé quand quelqu'un l'a fait.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; le premier
-> cas, la journée où six dépôts ont été bâtis à la fois, le 2026-10-29, est écrit avec un programme qui prend ses
-> comptes. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat
+> **État (2026-11-02) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; deux cas
+> sont écrits avec un programme qui prend leurs comptes : la journée où six dépôts ont été bâtis à la fois, le
+> 2026-10-29, et la nuit où huit dépôts ont reçu leur premier travail, le 2026-11-02. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat
 > nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
@@ -82,7 +82,9 @@ La liste de contrôle du lecteur de Runeson 2009, 12 points, lue avec les critè
 - **Dans le seul historique.** Un programme peut prendre commits, fichiers, étiquettes et fiches de décision par jour. Il ne peut pas prendre les questions parvenues à la personne, ni distinguer un commit d'une unité de travail.
 - **Confiance.** Ce qui est cité, compté et laissé de côté est dit dans le cas ; sa forme est [shapes/case.md](shapes/case.md).
 - **Le premier cas.** [La journée du 2026-10-29](cases/2026-10-29-family-night/README.md) : 434 commits, 50 étiquettes, 47 fiches ; 16 décisions sont parvenues à la personne, comptées à la main.
-- **Comparaison.** Il n'y a pas de témoin. Un cas se compare aux cas antérieurs de la méthode et à un contraste interne au cas ; le premier cas n'a pas d'antérieur.
+- **Comparaison.** Il n'y a pas de témoin. Un cas se compare aux cas antérieurs de la méthode et à un contraste interne au cas ; le premier cas n'a pas d'antérieur, et le second ne se compare à lui que par nature.
+- **Le second cas.** [La nuit du 2026-11-02](cases/2026-11-02-eight-first-jobs/README.md) : 33 commits sur huit dépôts, 16 fiches, aucune étiquette.
+  6 décisions sont parvenues à la personne, comptées à la main, et 5 sessions ont calé sur un changement de réseau. Le programme ne peut compter ni les messages de la personne, ni les calages, ni les retours, ni les poussées.
 
 ## Vérifier
 

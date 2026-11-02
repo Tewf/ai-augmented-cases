@@ -24,6 +24,8 @@ website:
         href: shapes/case.md
       - text: First case
         href: cases/2026-10-29-family-night/README.md
+      - text: Second case
+        href: cases/2026-11-02-eight-first-jobs/README.md
       - text: Decisions
         href: decisions/README.md
     right:
