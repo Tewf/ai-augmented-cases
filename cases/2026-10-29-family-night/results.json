@@ -1,0 +1,370 @@
+{
+  "day": "2026-10-29",
+  "offset": "+01:00",
+  "repositories": {
+    "reader-ergonomics": {
+      "commits_all_time": 160,
+      "commits": 104,
+      "files": 127,
+      "tags": [
+        [
+          "v1.0.0",
+          "01:23"
+        ],
+        [
+          "v1.0.1",
+          "12:29"
+        ],
+        [
+          "v1.1.0",
+          "12:57"
+        ],
+        [
+          "v1.1.1",
+          "13:10"
+        ],
+        [
+          "v1.1.2",
+          "13:33"
+        ],
+        [
+          "v1.2.0",
+          "13:45"
+        ],
+        [
+          "v1.3.0",
+          "13:55"
+        ],
+        [
+          "v1.3.1",
+          "14:54"
+        ],
+        [
+          "v1.3.2",
+          "15:03"
+        ],
+        [
+          "v1.4.0",
+          "15:48"
+        ],
+        [
+          "v1.4.1",
+          "15:54"
+        ],
+        [
+          "v1.4.2",
+          "16:12"
+        ],
+        [
+          "v1.4.3",
+          "16:14"
+        ],
+        [
+          "v1.5.0",
+          "17:01"
+        ],
+        [
+          "v1.5.1",
+          "17:06"
+        ],
+        [
+          "v1.5.2",
+          "17:12"
+        ],
+        [
+          "v1.5.3",
+          "17:14"
+        ],
+        [
+          "v1.6.0",
+          "17:18"
+        ],
+        [
+          "v1.7.0",
+          "17:28"
+        ],
+        [
+          "v1.8.0",
+          "17:47"
+        ],
+        [
+          "v1.8.1",
+          "17:51"
+        ],
+        [
+          "v1.9.0",
+          "18:01"
+        ],
+        [
+          "v1.10.0",
+          "18:12"
+        ],
+        [
+          "v1.11.0",
+          "18:24"
+        ],
+        [
+          "v1.12.0",
+          "18:38"
+        ],
+        [
+          "v1.12.1",
+          "19:48"
+        ],
+        [
+          "v1.12.2",
+          "19:51"
+        ],
+        [
+          "v1.13.0",
+          "19:55"
+        ],
+        [
+          "v1.14.0",
+          "20:01"
+        ],
+        [
+          "v1.15.0",
+          "21:08"
+        ],
+        [
+          "v1.16.0",
+          "21:15"
+        ],
+        [
+          "v1.16.1",
+          "21:25"
+        ],
+        [
+          "v1.17.0",
+          "21:37"
+        ],
+        [
+          "v1.18.0",
+          "21:44"
+        ],
+        [
+          "v1.18.1",
+          "21:47"
+        ],
+        [
+          "v1.18.2",
+          "21:52"
+        ],
+        [
+          "v1.19.0",
+          "22:40"
+        ],
+        [
+          "v1.19.1",
+          "22:45"
+        ],
+        [
+          "v1.19.2",
+          "23:28"
+        ]
+      ],
+      "decisions": [
+        "decisions/0001-extensions-depend-one-way.md",
+        "decisions/0002-checks-run-in-tiers-by-cost.md",
+        "decisions/0003-one-key-one-work-across-the-family.md",
+        "decisions/0004-an-organisation-key-may-carry-a-title-word.md",
+        "decisions/0005-a-key-clash-in-the-family-is-an-error.md",
+        "decisions/0006-a-claim-is-graded-clause-by-clause.md"
+      ],
+      "moves": 0,
+      "first": "00:29",
+      "last": "23:27",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-academic": {
+      "commits_all_time": 87,
+      "commits": 56,
+      "files": 72,
+      "tags": [
+        [
+          "v1.0.0",
+          "22:24"
+        ]
+      ],
+      "decisions": [],
+      "moves": 0,
+      "first": "00:04",
+      "last": "22:36",
+      "skew": 0,
+      "shared": 0,
+      "carried": 6
+    },
+    "reader-ergonomics-presentations": {
+      "commits_all_time": 86,
+      "commits": 64,
+      "files": 120,
+      "tags": [
+        [
+          "v1.0.0",
+          "22:24"
+        ]
+      ],
+      "decisions": [
+        "decisions/0001-a-public-standard-and-private-styles.md",
+        "decisions/0002-contexts-are-audiences.md",
+        "decisions/0003-decks-are-html-sections.md",
+        "decisions/0004-pin-reader-ergonomics-at-a-release.md",
+        "decisions/0005-the-example-deck-is-not-named-after-its-shape.md",
+        "decisions/0006-the-visual-standard-of-the-family.md",
+        "decisions/0007-diagrams-are-drawn-with-graphviz.md"
+      ],
+      "moves": 0,
+      "first": "00:04",
+      "last": "22:36",
+      "skew": 0,
+      "shared": 0,
+      "carried": 6
+    },
+    "reader-ergonomics-software-design": {
+      "commits_all_time": 76,
+      "commits": 66,
+      "files": 142,
+      "tags": [
+        [
+          "v1.0.0",
+          "22:18"
+        ]
+      ],
+      "decisions": [
+        "decisions/0001-pin-links-at-the-release-commit.md",
+        "decisions/0002-move-to-reader-ergonomics-1-2-0.md",
+        "decisions/0003-move-to-reader-ergonomics-1-3-0.md",
+        "decisions/0004-move-to-reader-ergonomics-1-3-2.md",
+        "decisions/0005-move-to-reader-ergonomics-1-4-3.md",
+        "decisions/0006-move-to-reader-ergonomics-1-6-0.md",
+        "decisions/0007-move-to-reader-ergonomics-1-8-1.md",
+        "decisions/0008-move-to-reader-ergonomics-1-9-0.md",
+        "decisions/0009-move-to-reader-ergonomics-1-10-0.md",
+        "decisions/0010-move-to-reader-ergonomics-1-11-0.md",
+        "decisions/0011-move-to-reader-ergonomics-1-12-0.md",
+        "decisions/0012-move-to-reader-ergonomics-1-13-0.md"
+      ],
+      "moves": 11,
+      "first": "00:04",
+      "last": "22:36",
+      "skew": 0,
+      "shared": 0,
+      "carried": 1
+    },
+    "reader-ergonomics-learning": {
+      "commits_all_time": 42,
+      "commits": 42,
+      "files": 112,
+      "tags": [
+        [
+          "v1.0.0",
+          "22:27"
+        ]
+      ],
+      "decisions": [
+        "decisions/0001-take-the-document-not-the-technique.md",
+        "decisions/0002-four-reviews.md",
+        "decisions/0003-derive-the-shapes-from-the-topic.md",
+        "decisions/0004-five-shapes-and-a-markup.md"
+      ],
+      "moves": 0,
+      "first": "13:56",
+      "last": "22:36",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-topic": {
+      "commits_all_time": 87,
+      "commits": 87,
+      "files": 162,
+      "tags": [
+        [
+          "v0.1.0",
+          "11:42"
+        ],
+        [
+          "v0.2.0",
+          "11:49"
+        ],
+        [
+          "v0.3.0",
+          "13:15"
+        ],
+        [
+          "v0.4.0",
+          "13:48"
+        ],
+        [
+          "v0.5.0",
+          "18:54"
+        ],
+        [
+          "v0.6.0",
+          "21:21"
+        ],
+        [
+          "v0.6.1",
+          "22:18"
+        ]
+      ],
+      "decisions": [
+        "decisions/0001-call-the-unit-a-topic.md",
+        "decisions/0002-three-reviews.md",
+        "decisions/0003-link-the-shapes-never-move-them.md",
+        "decisions/0004-every-document-is-a-topic.md",
+        "decisions/0005-revise-after-the-held-out-test.md",
+        "decisions/0006-move-to-reader-ergonomics-v1.1.1.md",
+        "decisions/0007-a-branch-for-the-ai-augmented-topic.md",
+        "decisions/0007-derive-the-decision-records-from-the-topic.md",
+        "decisions/0008-move-to-v1.2.0-and-drop-the-local-quote-check.md",
+        "decisions/0009-follow-the-standards-decision-record.md",
+        "decisions/0010-move-to-reader-ergonomics-v1.4.1.md",
+        "decisions/0011-move-to-reader-ergonomics-v1.9.0.md",
+        "decisions/0013-move-to-reader-ergonomics-v1.11.0.md",
+        "decisions/0014-move-to-reader-ergonomics-v1.12.0.md",
+        "decisions/0015-move-to-reader-ergonomics-v1.13.0.md",
+        "decisions/0016-move-the-ai-augmented-strand-out.md"
+      ],
+      "moves": 7,
+      "first": "00:21",
+      "last": "22:17",
+      "skew": 0,
+      "shared": 0,
+      "carried": 12
+    },
+    "reader-ergonomics-blueprint": {
+      "commits_all_time": 15,
+      "commits": 15,
+      "files": 55,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-call-it-a-blueprint.md"
+      ],
+      "moves": 0,
+      "first": "13:39",
+      "last": "21:59",
+      "skew": 0,
+      "shared": 0,
+      "carried": 12
+    }
+  },
+  "summed": 434,
+  "distinct": 434,
+  "distinct_work": 415,
+  "hand": {
+    "reached": 16,
+    "absorbed": 4,
+    "error": 7
+  },
+  "errors_caught_by": {
+    "hook": 1,
+    "owner session": 3,
+    "reviewer": 1,
+    "coordinator": 2
+  }
+}
