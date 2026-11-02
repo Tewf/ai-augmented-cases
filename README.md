@@ -10,10 +10,9 @@ happened when someone did.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** set up; nothing is written yet beyond the scope. The first job is a literature review of
-> how a case is written so that it can be trusted, not started; the first case will be the day six repositories were
-> built at once, 2026-10-29. The name is provisional. It is not an official standard, not a peer-reviewed study and
-> not a new result.
+> **Status (2026-11-02):** the first review is written (a first pass, 37 sources) and names its baseline; the first case,
+> the day six repositories were built at once, 2026-10-29, is written with a program that takes its counts. The name
+> stays provisional. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
@@ -64,33 +63,25 @@ digraph where_it_sits {
 | out | the method itself | [ai-augmented-project](https://github.com/Tewf/ai-augmented-project), [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) |
 | out | a case with a confidential subject | it stays private; only its measures may be reported |
 
-## The first job: a literature review
+## What the review found
 
-Not started. It follows the order of a thesis review, and it is finished when it can name the baseline.
+The review is in [evidence/case-reports](evidence/case-reports/): 37 sources, 29 formal and 8 grey, in the five steps.
 
-1. **Frame:** what the field calls a report on one real project, written by its participants, with numbers. Leads to
-   verify: case study research in software engineering, experience reports, post-mortems and retrospectives, mining
-   software repositories. The repository may be renamed then.
-2. **Review:** each name, searched by its academic name, its acronym and its author; surveys first.
-   - guidelines for case study research and for experience reports: what makes one trustworthy;
-   - what has been measured about people working with coding agents, and how;
-   - measures taken from version-control history alone, and their known biases;
-   - post-mortems as grey literature: what practice records, and what it omits.
-3. **State of the art, and the case against.**
-4. **Position:** what this repository asks that the field does not already answer.
-5. **Baseline:** the published guideline for a case study a report here must meet, named, and the first case written
-   against it.
+- **The field's name differs from ours.** A report written by those who took part is an **experience report**, not a case study: the community standard for case studies excludes it. A case here is an experience report with repository measures, and says so ([frame](evidence/case-reports/frame.md)).
+- **A history misleads in known ways.** A repository is not a project, commits move and are rewritten, and large commits differ in intent. In the first case, 434 commits summed over seven repositories are 415 distinct, and 50 tags are 6 releases on the host.
+- **No study counts what this repository asks for.** Studies of coding agents measure a task, a pull request or a project; company write-ups report sessions and cost. None in the pool counts the questions that reached a person in a day.
+- **Trust rests on convention.** The guidelines are built from other guidelines and experience; no study shows that a checklist makes a case more trusted. The checklist's weak item for a report from inside is triangulation.
 
-## Questions the review must answer
+## The baseline
 
-- **From the history alone.** Which of the measures above can a program take from a repository's history, with what
-  bias?
-- **Trust.** How is a case written by one of its own agents made trustworthy to a reader who was absent: what is
-  quoted, what is counted, what is left out and said so?
-- **The first case.** What the day of 2026-10-29 cost and produced: six repositories, one coordinating session, the
-  questions that reached the person, the facts written twice and found.
-- **Comparison.** Against what is a case compared: the same project without the method, or the method's own earlier
-  cases?
+The reader's checklist of Runeson 2009, 12 items, read with the experience-report criteria of ICSE 2003 and the Case Study and Repository Mining standards. A case answers each item, met or not met with a reason, and a program takes every count it can; a hand count is marked ([baseline](evidence/case-reports/baseline.md), [record 0002](decisions/0002-a-case-meets-the-readers-checklist.md)).
+
+## Questions the review answered
+
+- **From the history alone.** A program can take commits, files, tags and decision records per day. It cannot take questions that reached the person, nor tell a commit from a unit of work.
+- **Trust.** What is quoted, counted and left out is said in the case; its shape is [shapes/case.md](shapes/case.md).
+- **The first case.** [The day of 2026-10-29](cases/2026-10-29-family-night/README.md): 434 commits, 50 tags, 47 records; 16 decisions reached the person, counted by hand.
+- **Comparison.** There is no control. A case is compared with the method's earlier cases, and with a contrast inside the case; the first case has no earlier one.
 
 ## Check it
 
@@ -108,6 +99,9 @@ master also renders the site, [tewf.github.io/ai-augmented-cases](https://tewf.g
 
 | Part | Summary |
 |---|---|
+| [evidence](evidence/) | the review behind this repository and its bibliography |
+| [shapes](shapes/) | the shape of a case, derived from the baseline guideline |
+| [cases](cases/) | one folder per real project: the report, the program that takes its counts, and the numbers of its run |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

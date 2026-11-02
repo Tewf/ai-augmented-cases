@@ -1,12 +1,16 @@
 # AI-augmented cases
 
-> One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. Scope only; the first case, the day six repositories were built at once, is not written.
+> One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. A first-pass review names the baseline, a reader's checklist of Runeson 2009; the first case, the day six repositories were built at once, is written with a program that takes its counts.
 
 Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
 
 ## The repository
 
-- [AI-augmented cases](https://tewf.github.io/ai-augmented-cases/README.md): the scope, the first job and the questions its review must answer
+- [AI-augmented cases](https://tewf.github.io/ai-augmented-cases/README.md): the scope, what the review found, the baseline and the questions answered
+- [Evidence](https://tewf.github.io/ai-augmented-cases/evidence/README.md): the review of how a report on one real project is written to be trusted, and its bibliography
+- [Case reports](https://tewf.github.io/ai-augmented-cases/evidence/case-reports/README.md): 37 sources, five steps, the baseline named
+- [Shape of a case](https://tewf.github.io/ai-augmented-cases/shapes/case.md): the parts of a case, derived from the baseline
+- [First case](https://tewf.github.io/ai-augmented-cases/cases/2026-10-29-family-night/README.md): the day six repositories were built at once
 - [Decisions](https://tewf.github.io/ai-augmented-cases/decisions/README.md): one record per choice that shapes the repository
 
 ## Contributing

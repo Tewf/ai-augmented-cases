@@ -18,6 +18,12 @@ website:
   page-navigation: true
   navbar:
     left:
+      - text: Evidence
+        href: evidence/README.md
+      - text: Shapes
+        href: shapes/case.md
+      - text: First case
+        href: cases/2026-10-29-family-night/README.md
       - text: Decisions
         href: decisions/README.md
     right:

@@ -10,10 +10,10 @@ celui-ci consigne ce qui s'est passé quand quelqu'un l'a fait.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** mis en place ; rien n'est encore écrit au-delà du périmètre. Le premier travail est une revue
-> de littérature sur la façon d'écrire un cas pour qu'on puisse s'y fier, non commencée ; le premier cas sera la journée
-> où six dépôts ont été bâtis à la fois, le 2026-10-29. Le nom est provisoire. Ce n'est ni une norme officielle, ni une
-> étude relue par des pairs, ni un résultat nouveau.
+> **État (2026-11-02) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; le premier
+> cas, la journée où six dépôts ont été bâtis à la fois, le 2026-10-29, est écrit avec un programme qui prend ses
+> comptes. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat
+> nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
@@ -64,31 +64,25 @@ digraph where_it_sits {
 | dehors | la méthode elle-même | [ai-augmented-project](https://github.com/Tewf/ai-augmented-project), [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project) |
 | dehors | un cas au sujet confidentiel | il reste privé ; seules ses mesures peuvent être rapportées |
 
-## Le premier travail : une revue de littérature
+## Ce que la revue a trouvé
 
-Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence.
+La revue est dans [evidence/case-reports](evidence/case-reports/) (en anglais) : 37 sources, 29 formelles et 8 grises, en cinq étapes.
 
-1. **Cadrer :** comment le domaine nomme un rapport sur un projet réel, écrit par ses participants, avec des nombres.
-   Pistes à vérifier : étude de cas en génie logiciel, rapports d'expérience, post-mortems et rétrospectives, fouille des
-   dépôts logiciels. Le dépôt peut être renommé alors.
-2. **Revue :** chaque nom, cherché par son nom académique, son acronyme et son auteur ; les synthèses d'abord.
-   - les guides de l'étude de cas et du rapport d'expérience : ce qui rend l'un fiable ;
-   - ce qui a été mesuré sur des personnes travaillant avec des agents de code, et comment ;
-   - les mesures prises dans le seul historique de version, et leurs biais connus ;
-   - les post-mortems comme littérature grise : ce que la pratique consigne, et ce qu'elle omet.
-3. **État de l'art, et le dossier contre.**
-4. **Positionnement :** ce que ce dépôt demande et que le domaine ne répond pas déjà.
-5. **Référence :** le guide publié d'étude de cas qu'un rapport ici doit respecter, nommé, et le premier cas écrit contre lui.
+- **Le nom du domaine diffère du nôtre.** Un rapport écrit par ceux qui ont participé est un **rapport d'expérience**, pas une étude de cas : la norme communautaire de l'étude de cas l'exclut. Un cas ici est un rapport d'expérience avec des mesures de dépôt, et le dit ([cadrage](evidence/case-reports/frame.md)).
+- **Un historique trompe de façons connues.** Un dépôt n'est pas un projet, les commits se déplacent et se réécrivent, et les gros commits n'ont pas la même intention. Dans le premier cas, 434 commits additionnés sur sept dépôts font 415 commits distincts, et 50 étiquettes font 6 publications sur l'hébergeur.
+- **Aucune étude ne compte ce que ce dépôt demande.** Les études sur les agents de code mesurent une tâche, une demande de fusion ou un projet ; les récits d'entreprises donnent sessions et coût. Aucune de la sélection ne compte les questions parvenues à une personne en une journée.
+- **La confiance repose sur la convention.** Les guides sont bâtis sur d'autres guides et sur l'expérience ; aucune étude ne montre qu'une liste de contrôle rend un cas plus crédible. Le point faible de la liste pour un rapport de l'intérieur est la triangulation.
 
-## Questions auxquelles la revue doit répondre
+## La référence
 
-- **Dans le seul historique.** Lesquelles des mesures ci-dessus un programme peut-il prendre dans l'historique d'un
-  dépôt, avec quel biais ?
-- **Confiance.** Comment un cas écrit par l'un de ses propres agents devient-il fiable pour un lecteur absent : ce qui
-  est cité, compté, laissé de côté et dit tel ?
-- **Le premier cas.** Ce que la journée du 2026-10-29 a coûté et produit : six dépôts, une session coordinatrice, les
-  questions parvenues à la personne, les faits écrits deux fois et trouvés.
-- **Comparaison.** À quoi un cas se compare-t-il : le même projet sans la méthode, ou les cas antérieurs de la méthode ?
+La liste de contrôle du lecteur de Runeson 2009, 12 points, lue avec les critères du rapport d'expérience d'ICSE 2003 et les normes d'étude de cas et de fouille de dépôts. Un cas répond à chaque point, tenu ou non avec une raison, et un programme prend tous les comptes qu'il peut ; un compte à la main est signalé ([référence](evidence/case-reports/baseline.md), [fiche 0002](decisions/0002-a-case-meets-the-readers-checklist.md)).
+
+## Questions auxquelles la revue a répondu
+
+- **Dans le seul historique.** Un programme peut prendre commits, fichiers, étiquettes et fiches de décision par jour. Il ne peut pas prendre les questions parvenues à la personne, ni distinguer un commit d'une unité de travail.
+- **Confiance.** Ce qui est cité, compté et laissé de côté est dit dans le cas ; sa forme est [shapes/case.md](shapes/case.md).
+- **Le premier cas.** [La journée du 2026-10-29](cases/2026-10-29-family-night/README.md) : 434 commits, 50 étiquettes, 47 fiches ; 16 décisions sont parvenues à la personne, comptées à la main.
+- **Comparaison.** Il n'y a pas de témoin. Un cas se compare aux cas antérieurs de la méthode et à un contraste interne au cas ; le premier cas n'a pas d'antérieur.
 
 ## Vérifier
 
@@ -106,6 +100,9 @@ master construit aussi le site, [tewf.github.io/ai-augmented-cases](https://tewf
 
 | Partie | Résumé |
 |---|---|
+| [evidence](evidence/) | la revue derrière ce dépôt et sa bibliographie |
+| [shapes](shapes/) | la forme d'un cas, tirée de la référence |
+| [cases](cases/) | un dossier par projet réel : le rapport, le programme qui prend ses comptes, et les nombres de son exécution |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence

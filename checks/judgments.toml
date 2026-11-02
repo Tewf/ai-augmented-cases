@@ -11,3 +11,59 @@ path = "decisions"
 question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
 file = ""
 answer = "It stays: `decisions` is the folder the decision-record shape names for its records; it holds the README and record 0001 today, and grows one file per choice."
+
+[[answer]]
+check = "tree-shape"
+path = "cases"
+question = "1 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `cases` is the folder of one report per real project, each in a folder of its own; it holds the first case today and grows one folder per case."
+
+[[answer]]
+check = "tree-shape"
+path = "shapes"
+question = "1 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `shapes` is the folder the extension layout names for the shapes of its genre; it holds the shape of a case today and grows with the genres the cases need."
+
+[[answer]]
+check = "logical-lines"
+path = "cases/2026-10-29-family-night/README.md"
+question = "87 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "40271669038d"
+answer = "It stays whole: the file has one role, the report of one day in the fixed parts of its shape, from `Summary` to `Rerun`, and the tables are most of its lines."
+
+[[answer]]
+check = "document-mode"
+path = "AGENTS.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "251bce837da7"
+answer = "It has one mode, a how-to for changing the repository: `Rules for claims` and `Before handing back` are steps to follow, and the rest supports them."
+
+[[answer]]
+check = "document-mode"
+path = "cases/2026-10-29-family-night/README.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "40271669038d"
+answer = "It has one mode, understanding what happened: the report is read for its `Results` and `Lessons`, and the rerun command is a short pointer to the program."
+
+[[answer]]
+check = "name-content"
+path = "evidence/case-reports/frame.md"
+question = "the name 'frame' and the opening are far apart in meaning (0.04): does the name predict the content?"
+file = "812456cceec1"
+answer = "Yes: it frames the problem, as it opens: `Step 1 of the review`, the problem in one sentence and the names the field uses."
+
+[[answer]]
+check = "name-content"
+path = "evidence/case-reports/position.md"
+question = "the name 'position' and the opening are far apart in meaning (0.12): does the name predict the content?"
+file = "fc6930572545"
+answer = "Yes: it positions the repository, as it opens: `Step 4 of the review`, what is known, what is not and what this repository adds."
+
+[[answer]]
+check = "name-content"
+path = "evidence/case-reports/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.08): does the name predict the content?"
+file = "12eaac28ae5f"
+answer = "Yes: the review's step 3, as it opens: `Step 3 of the review`, the best evidence and the practice most adopted for each question."
