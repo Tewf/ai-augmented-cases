@@ -16,10 +16,9 @@ An experience report with repository measures. Eight repositories were set up in
 
 ## Genre and baseline
 
-- This is an **experience report** in the sense of ICSE 2003, with a **historical** part drawn from repositories (Ralph 2020). It is not a case study by observation.
-- It is written afterwards by a session that was none of the nine, from the maintainer's notes of the night and the eight git histories.
-- The checklist of Runeson 2009 is answered in the sections below; the [baseline](../../evidence/case-reports/baseline.md) maps each of its 12 items to a part.
-- It follows the [first case](../2026-10-29-family-night/README.md) and runs its program, with one added option, on eight other repositories.
+- The genre, the baseline and the checklist are those of the [first case](../2026-10-29-family-night/README.md#genre-and-baseline).
+- This report is written afterwards by a session that was none of the nine, from the maintainer's notes of the night and the eight git histories.
+- It runs the first case's program, with one added option, on eight other repositories.
 
 ## The case
 
@@ -27,12 +26,12 @@ An experience report with repository measures. Eight repositories were set up in
 - **Actors:** one maintainer, one coordinating session, and eight owner sessions, one per repository. The count of sessions is from the notes, not from history.
 - **Unit of analysis:** the repository-night, from the afternoon set-up to the last push of the night.
 - **Context:** each repository was a front page and one decision record, hours old. Two batches of four ran in parallel. A budget gate stopped a batch from launching above a share of the weekly limit.
-- **Outside the case:** two further jobs of the same night, a logo and a travelling-salesman study, which touched no one of these repositories.
+- **Outside the case:** other jobs of the same day, in other repositories, which the notes of the night do not count here.
 
 ## Why this case
 
 - It is the first night when a coordinator ran owners in two parallel batches, which the first case could only suggest.
-- It is a convenience case: the next one available and the one the writers know. It is chosen for what it can teach, not as typical (Baltes 2022).
+- It is a convenience case again, the next night available. Like the first, it is picked for what it can teach and is not offered as typical.
 
 ## Data and procedure
 
@@ -50,9 +49,9 @@ An experience report with repository measures. Eight repositories were set up in
 
 ## Analysis
 
-- Counts are printed as taken. Nothing is smoothed.
-- Each caution is a column beside the count: commits shared by hash, commits that recur under another hash, commits whose author day differs.
-- No model analysed any data. The prose was drafted by a model and is to be read by the maintainer before it counts.
+- The analysis is the [first case's](../2026-10-29-family-night/README.md#analysis): printed as taken, a caution beside each count.
+- The cautions are the program's three columns, shared, carried and skew.
+- No model analysed any data. A model drafted the prose, and the maintainer reads it before it counts.
 
 ## Results
 
@@ -114,13 +113,13 @@ For 2026-11-03, two repositories had commits.
 - Git and the notes agree on every head at close and on the number of jobs.
 - They are not independent: the notes were kept by the session that coordinated the night.
 - Each job's own notes add a third reading, written by the owner, and agree with the coordinating notes where they overlap.
-- No interviews, no second reader of the hand counts, no timing of the maintainer.
+- Missing again: interviews, a second reader of the hand counts, and any timing of the maintainer.
 
 ## Roles and ethics
 
-- The writer took no part in the night. The maintainer did, and decides publication.
-- Commit authors are not shown; the program prints no names or addresses.
-- Nothing confidential is cited. The notes are described, not linked, and name no private repository.
+- The writer was absent from the night. The maintainer was present and decides whether this is published.
+- The program prints no authors, names or addresses.
+- No confidential source is cited. The notes are described and not linked, and none names a private repository.
 
 ## Lessons
 
@@ -154,15 +153,16 @@ Heads at close, the commits the checkouts are pinned to for the rerun.
 Clone each repository beside the others and reset it to its head above, then run from this folder:
 
 ```sh
-python3 ../2026-10-29-family-night/measures.py --root path/to/checkouts --day 2026-11-02 \
-  --repos ai-augmented ai-augmented-project ai-augmented-ide ai-augmented-agents ai-augmented-foundations \
-          ai-augmented-cases reader-ergonomics-project reader-ergonomics-family \
-  --hand hand-counts.csv --json results-2026-11-02.json
-python3 ../2026-10-29-family-night/measures.py ... --day 2026-11-03 --json results-2026-11-03.json
+REPOS="ai-augmented ai-augmented-project ai-augmented-ide ai-augmented-agents ai-augmented-foundations \
+       ai-augmented-cases reader-ergonomics-project reader-ergonomics-family"
+for day in 2026-11-02 2026-11-03; do
+  python3 ../2026-10-29-family-night/measures.py --root path/to/checkouts --day $day --repos $REPOS \
+    --hand hand-counts.csv --json results-$day.json
+done
 python3 -m unittest discover -s ../2026-10-29-family-night
 ```
 
-The second command takes the same options as the first. The two `results-` files hold the numbers of the run behind this page.
+The two `results-` files hold the numbers of the run behind this page.
 
 ## See also
 

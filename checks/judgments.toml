@@ -14,13 +14,6 @@ answer = "It stays: `decisions` is the folder the decision-record shape names fo
 
 [[answer]]
 check = "tree-shape"
-path = "cases"
-question = "1 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
-file = ""
-answer = "It stays: `cases` is the folder of one report per real project, each in a folder of its own; it holds the first case today and grows one folder per case."
-
-[[answer]]
-check = "tree-shape"
 path = "shapes"
 question = "1 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
 file = ""
@@ -67,3 +60,18 @@ path = "evidence/case-reports/state-of-the-art.md"
 question = "the name 'state' and the opening are far apart in meaning (0.08): does the name predict the content?"
 file = "12eaac28ae5f"
 answer = "Yes: the review's step 3, as it opens: `Step 3 of the review`, the best evidence and the practice most adopted for each question."
+
+[[answer]]
+check = "tree-shape"
+path = "cases"
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `cases` is the folder of one report per real project, each in a folder of its own; it holds two cases today and grows one folder per case."
+
+
+[[answer]]
+check = "logical-lines"
+path = "cases/2026-11-02-eight-first-jobs/README.md"
+question = "104 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "ec94546d2ce9"
+answer = "It reports one night in the parts the case shape requires, so it stays whole: `Summary` first, `Results` and `Chain of evidence` in the middle, and `Rerun` last, as the first case does."
