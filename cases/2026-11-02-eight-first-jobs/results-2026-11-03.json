@@ -1,0 +1,128 @@
+{
+  "day": "2026-11-03",
+  "offset": "+01:00",
+  "repositories": {
+    "ai-augmented": {
+      "commits_all_time": 6,
+      "commits": 2,
+      "files": 17,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": "00:13",
+      "last": "00:13",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-project": {
+      "commits_all_time": 4,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-ide": {
+      "commits_all_time": 3,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-agents": {
+      "commits_all_time": 4,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-foundations": {
+      "commits_all_time": 3,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-cases": {
+      "commits_all_time": 5,
+      "commits": 3,
+      "files": 27,
+      "tags": [],
+      "decisions": [
+        "decisions/0002-a-case-meets-the-readers-checklist.md"
+      ],
+      "moves": 0,
+      "first": "00:42",
+      "last": "00:42",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-project": {
+      "commits_all_time": 4,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-family": {
+      "commits_all_time": 4,
+      "commits": 0,
+      "files": 0,
+      "tags": [],
+      "decisions": [],
+      "moves": 0,
+      "first": null,
+      "last": null,
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    }
+  },
+  "summed": 5,
+  "distinct": 5,
+  "distinct_work": 5,
+  "hand": {
+    "reached": 6,
+    "stall": 5,
+    "review": 7,
+    "program": 2,
+    "push": 8,
+    "error": 3,
+    "found": 3
+  },
+  "errors_caught_by": {
+    "hook": 1,
+    "owner session": 2
+  }
+}

@@ -1,0 +1,35 @@
+n,kind,caught_by,item,where
+1,reached,,scope question 1 of 4 answered together; its content is not itemised in the log,brief of this case
+2,reached,,scope question 2 of 4 answered together,brief of this case
+3,reached,,scope question 3 of 4 answered together,brief of this case
+4,reached,,scope question 4 of 4 answered together,brief of this case
+5,reached,,one placement question; its content is not itemised in the log,brief of this case
+6,reached,,hook allowance for a cited title: held one push for two hours,notes of the night: job B
+7,stall,,job C stalled at ten minutes with nothing written; resumed,notes of the night: first resume
+8,stall,,job D stalled at ten minutes with nothing written; resumed,notes of the night: first resume
+9,stall,,job C stalled a second time; resumed from what was on disk,notes of the night: second resume
+10,stall,,job F stalled; resumed from what was on disk,notes of the night: second resume
+11,stall,,fifth stall named in the brief; the notes of the night do not say which job,brief of this case
+12,review,,job A first-pass review returned,notes of the night
+13,review,,job B first-pass review returned,notes of the night
+14,review,,job C first-pass review returned,notes of the night
+15,review,,job D first-pass review returned,notes of the night
+16,review,,job E first-pass review returned,notes of the night
+17,review,,job G first-pass review returned,notes of the night
+18,review,,job H first-pass review returned,notes of the night
+19,program,,job F returned a family audit program,notes of the night
+20,program,,job G returned a scope-overlap check program,notes of the night
+21,push,,job A,notes of the night
+22,push,,job B held two hours on the allowance,notes of the night
+23,push,,job C,notes of the night
+24,push,,job D,notes of the night
+25,push,,job E,notes of the night
+26,push,,job F,notes of the night
+27,push,,job G,notes of the night
+28,push,,job H,notes of the night
+29,error,hook,a cited paper title that names a product refused before the push,notes of the night: job B
+30,error,owner session,a page fetch carried a browser identification string; noted by the owner and not repeated,notes of the night: job B
+31,error,owner session,two earlier notes of job H corrected after the sources were read,notes of the night: job H
+32,found,,two decision records numbered 0007 and none numbered 0012 in another repository,notes of job E and of the night
+33,found,,a bibliography row with a conference title beside a journal DOI,notes of job D
+34,found,,one author spelled two ways in two bibliographies,notes of job B

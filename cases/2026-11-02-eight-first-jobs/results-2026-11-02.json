@@ -1,0 +1,149 @@
+{
+  "day": "2026-11-02",
+  "offset": "+01:00",
+  "repositories": {
+    "ai-augmented": {
+      "commits_all_time": 6,
+      "commits": 4,
+      "files": 21,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:31",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-project": {
+      "commits_all_time": 4,
+      "commits": 4,
+      "files": 33,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-keep-the-name-and-take-the-practice-as-baseline.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:17",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-ide": {
+      "commits_all_time": 3,
+      "commits": 3,
+      "files": 32,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-kilo-code-as-the-baseline.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:48",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-agents": {
+      "commits_all_time": 4,
+      "commits": 4,
+      "files": 33,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-the-baseline-is-the-maintainers-arrangement.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:54",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-foundations": {
+      "commits_all_time": 3,
+      "commits": 3,
+      "files": 43,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-keep-the-name-after-the-frame-step.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:28",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "ai-augmented-cases": {
+      "commits_all_time": 5,
+      "commits": 2,
+      "files": 19,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "16:03",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-project": {
+      "commits_all_time": 4,
+      "commits": 4,
+      "files": 33,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-keep-the-name-name-the-baseline.md"
+      ],
+      "moves": 0,
+      "first": "15:57",
+      "last": "23:22",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    },
+    "reader-ergonomics-family": {
+      "commits_all_time": 4,
+      "commits": 4,
+      "files": 33,
+      "tags": [],
+      "decisions": [
+        "decisions/0001-a-repository-of-its-own.md",
+        "decisions/0002-the-family-audit-is-a-program-here.md",
+        "decisions/0003-a-stale-state-is-a-warning.md"
+      ],
+      "moves": 0,
+      "first": "16:44",
+      "last": "23:57",
+      "skew": 0,
+      "shared": 0,
+      "carried": 0
+    }
+  },
+  "summed": 28,
+  "distinct": 28,
+  "distinct_work": 28,
+  "hand": {
+    "reached": 6,
+    "stall": 5,
+    "review": 7,
+    "program": 2,
+    "push": 8,
+    "error": 3,
+    "found": 3
+  },
+  "errors_caught_by": {
+    "hook": 1,
+    "owner session": 2
+  }
+}
