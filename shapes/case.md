@@ -4,7 +4,7 @@ A **case** is a report on one real project run with the method: what was asked, 
 
 Each part answers an item of the reader's checklist of Runeson 2009, the repository's baseline. Its grade is convention. The choice and the sources are in the [baseline](../evidence/case-reports/baseline.md).
 
-Its filled example is the [first case](../cases/2026-10-29-family-night/README.md).
+Its filled examples are the [first case](../cases/2026-10-29-family-night/README.md) and the [second case](../cases/2026-11-02-eight-first-jobs/README.md); each carries a `**Shape:**` line back to this page.
 
 ## When to use it
 
@@ -31,6 +31,19 @@ Its filled example is the [first case](../cases/2026-10-29-family-night/README.m
 | Method version | the commit of each member the case ran with, and whether the reasoning went through the blueprint | none | repository rule |
 | Rerun | the command that retakes the numbers | 45 | measured, for programs |
 
+## The measures table
+
+The Results part prints what the program took as a table of one form, so that every case reads alike and the check finds it.
+
+| Repository | Commits | Files | Tags | Records | First | Last | Carried |
+|---|---|---|---|---|---|---|---|
+| one row per repository | committer time on the day | distinct paths those commits touch | tags created on the day | decision records first added | first commit | last commit | commits that recur under another hash |
+
+- A last row **all** sums the columns that add. Under the table, one line states the commits summed, the distinct pairs of author time and subject, and the pin or move records where the case has them.
+- The Carried column is required: it is the caution that turns a commit total into distinct work. Shared may stand beside it, as in the second case; shared and skew are in the results file and named in the prose when they are not zero.
+- A number taken by hand never enters this table; it follows it in a list, each item marked (by hand, n).
+- A day that crosses midnight gets a second table for the second day, with the columns it has.
+
 ## Rules
 
 1. The page opens with the answer, then the figure or table, then the prose.
@@ -40,6 +53,7 @@ Its filled example is the [first case](../cases/2026-10-29-family-night/README.m
 5. Positive and negative observations both appear. A case with nothing against it is not finished.
 6. A case names no tool, no private path and no private repository; its sources are described.
 7. Its measures come with a program and a test, and the numbers of the run are kept beside it.
+8. The Analysis says that no model analysed the data; the Genre says experience report.
 
 ## Skeleton
 
@@ -64,9 +78,24 @@ Copy the headings below into `cases/<date>-<name>/README.md`, and add `measures.
 ## Lessons
 ## Method version
 ## Rerun
+## Worked example
+
+The [first case](../cases/2026-10-29-family-night/README.md) is the full example: each part is filled, the measures table has the form above, and the hand counts follow it in a list. The [second case](../cases/2026-11-02-eight-first-jobs/README.md) shows a case that reuses an earlier case's program and genre by a link, and a night that crosses midnight.
+
+## The principles it applies
+
+| Part | Principle | Check |
+|---|---|---|
+| Results | [Print the caution beside the count](../principles/counting/caution-beside-the-count.md) | `case-counts` |
+| Results | [Distinct work over raw commits](../principles/counting/distinct-work-over-commits.md) | `case-distinct` |
+| Results, Data and procedure | [A hand count is marked](../principles/counting/hand-counts-are-marked.md) | `case-hand-counts` |
+| Genre and baseline | [A participant's report is an experience report](../principles/reporting/participants-write-experience-reports.md) | `case-genre` |
+| All parts | [Answer the reader's checklist](../principles/reporting/answer-the-readers-checklist.md) | `shape-conformance` |
+| Analysis | [No model analyses the data](../principles/reporting/no-model-analyses-the-data.md) | `case-analysis` |
+
 ## See also
 ```
 
 ## See also
 
-[The decisions](../decisions/README.md); [the review](../evidence/case-reports/README.md).
+[The standard card](../standard.md); [the decisions](../decisions/README.md); [the review](../evidence/case-reports/README.md).
