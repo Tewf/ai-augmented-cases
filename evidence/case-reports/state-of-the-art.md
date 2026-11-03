@@ -3,6 +3,8 @@
 Step 3 of the review. For each question: the best evidence, kept apart from the practice most adopted, and the limits.
 Terms are in [frame](frame.md); the findings behind each line are in [review](review.md).
 
+**Shape:** [state of the art](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/state-of-the-art.md)
+
 ## Q1: measures from a history alone
 
 | Record | Holder | Basis | Grade |

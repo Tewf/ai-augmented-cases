@@ -3,6 +3,8 @@
 Step 1 of the review, read on 2026-11-02. It states the problem, defines each term once, and says whether the field's name matches the repository's.
 The pool is in [sources](sources.md); the searches are in [protocol](protocol.md).
 
+**Shape:** [frame](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/frame.md)
+
 ## The problem in one sentence
 
 How to write a report on one real project, by people who took part in it and holding counts taken from its repositories, so that a reader who was absent can trust it.

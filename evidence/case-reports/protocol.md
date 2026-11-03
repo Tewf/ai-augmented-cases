@@ -3,6 +3,8 @@
 A first pass, run on 2026-11-02 by one reviewer; extended on 2026-11-03 with forward citations and a second rating (sections 11 and 12). It covers the strings run, the stopping rule and what was not searched.
 Terms are in [frame](frame.md); the pool is in [sources](sources.md).
 
+**Shape:** [protocol](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/protocol.md)
+
 ## 1. Why grey literature
 
 Garousi 2019, Table 4, answered for this topic: five of seven get a yes.
@@ -52,7 +54,7 @@ Strings run on OpenAlex (title and abstract, no key, no identity), counts of tha
 | G2 | web: experience report parallel AI coding agents lessons learned 2026 | Carlini 2026, Lin 2026 |
 | G3 | web: guidelines for software experience report submission criteria | ICSE 2003, USENIX 2010 |
 | G4 | web: Kalliamvakou perils mining GitHub | an open copy of Kalliamvakou 2014 |
-| G5 | site reads: Beyer 2016, Luu 2026, Hashimoto 2026, Git 2026 | read in part |
+| G5 | site reads: Beyer 2016, Luu 2026, Hashimoto 2026, Git 2026 | 4 pages, each read in part |
 
 - Grey types: conference calls, a company book, company engineering posts, a personal blog, a community list, tool documentation.
 - An Etsy blog post of 2012 on blameless postmortems returned HTTP 403 and was dropped; it is a lead.

@@ -2,6 +2,8 @@
 
 The pool, read on 2026-11-02 and extended on 2026-11-03 by forward citation: 42 sources, 34 formal and 8 grey.
 
+**Shape:** [sources](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/sources.md)
+
 - Searches are in [protocol](protocol.md); terms in [frame](frame.md).
 - Below 10 of 20 a grey source would be an example of practice only.
 - After the second rating and the rereading (protocol section 12), Hashimoto 2026 is below at 8.5.

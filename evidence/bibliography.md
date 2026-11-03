@@ -2,6 +2,8 @@
 
 Every work this repository cites, once: Key, citation, and a stable link.
 
+**Shape:** [references](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/references.md)
+
 | Key | Citation | Link |
 |---|---|---|
 | Baltes 2022 | Baltes, Ralph (2022). Sampling in software engineering research: a critical review and guidelines. Empirical Software Engineering 27(4); preprint arXiv 2002.07764. Read in full | https://doi.org/10.1007/s10664-021-10072-8 |

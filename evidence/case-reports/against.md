@@ -2,6 +2,8 @@
 
 The evidence against a rule or a reading, kept here and not deleted. Terms are in [frame](frame.md).
 
+**Shape:** [against](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/against.md)
+
 ## Against trusting a report written from inside
 
 - A case study is by the standard's own scope a study with observation; an experience report is excluded from it (Ralph 2020). A case written by its participants is outside what that standard checks.

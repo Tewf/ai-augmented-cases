@@ -2,6 +2,8 @@
 
 Step 5 of the review. The review is finished when it names the baseline. Terms are in [frame](frame.md); the findings are in [review](review.md).
 
+**Shape:** [baseline](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/baseline.md)
+
 ## The baseline
 
 The reader's checklist of Runeson 2009 (Table 11, items 39 to 50), the published guideline for reporting case study research in software engineering.

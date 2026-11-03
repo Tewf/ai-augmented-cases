@@ -2,6 +2,8 @@
 
 Step 4 of the review. It keeps "nobody has done this" apart from "we have not done this here". Terms are in [frame](frame.md).
 
+**Shape:** [position](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/position.md)
+
 ## What the field already answers
 
 - How to report one case: the guidelines of Runeson 2009 and the Empirical Standards (Ralph 2020). Convention.

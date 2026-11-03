@@ -3,6 +3,8 @@
 Step 2 of the review, read on 2026-11-02; forward citations added on 2026-11-03. Strand 0 holds existing reviews; A to E answer the questions of [frame](frame.md).
 Grades follow the repository's four: measured, supported with caveat, convention, not supported. Sources are in [sources](sources.md).
 
+**Shape:** [review](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/review.md)
+
 ## Strand 0: existing reviews
 
 - Kagdi 2007 surveys mining of repositories along four dimensions: what is mined, why, how and with what evaluation. Supported with caveat.

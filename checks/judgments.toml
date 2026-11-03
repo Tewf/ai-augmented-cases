@@ -152,3 +152,10 @@ path = "evidence/case-reports/sources.md"
 question = "reads about equally as reference and how-to: one mode per document?"
 file = "c025f92ccdcc"
 answer = "Reference: the file follows its shape and is consulted part by part; its heading `Sources: the pool, its flow and its quality` names the one thing it holds."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "1d3e7e09f4fa"
+answer = "They stay apart: `CHANGELOG.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
