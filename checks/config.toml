@@ -20,6 +20,20 @@ shapes = [
   { name = "case", files = ["cases/*/README.md"], required = ["Summary", "Genre and baseline", "The case", "Why this case", "Data and procedure", "Analysis", "Results", "Chain of evidence", "Threats to validity", "Triangulation", "Roles and ethics", "Lessons", "Method version", "Rerun", "See also"] },
 ]
 
+# The principle groups of the card, in the order it shows them (standard.md).
+[standard_card]
+facets = ["counting", "reporting"]
+
+# Each shape links, or holds, a filled example of itself; the cases are the examples and say so on a Shape line.
+[shape_example]
+files = ["shapes/*.md"]
+exempt = ["shapes/README.md"]
+example_headings = ["Worked example", "Example"]
+
+# The checks of this repository, in checks/local/: case-counts, case-distinct, case-hand-counts, case-genre and
+# case-analysis. Each applies to the documents whose Shape line links shapes/case.md; shape-conformance, the
+# standard's, checks the headings of a case.
+
 # Path questions are answered with their path quoted, so the quotes check stays strict.
 [judgment_quotes]
 optional = []
