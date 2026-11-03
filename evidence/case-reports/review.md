@@ -17,8 +17,8 @@ Grades follow the repository's four: measured, supported with caveat, convention
 | A reader's checklist of 12 items (items 39 to 50) condenses a researcher's checklist of 38 | Runeson 2009, Tables 11 to 13 | convention |
 | The checklists were derived from existing checklists and the authors' experience, and fed back by an international network | Runeson 2009, abstract and Acknowledgement | convention |
 | Archival data from configuration management is a third degree source, but its documents were not written for research and may miss what the case needs | Runeson 2009, section 4.4 | convention |
-| The community standard for case studies has 7 essential attributes, among them the chain of evidence, the units of analysis and the selection of the case | Ralph 2020, Case Study standard | convention |
-| The same standard lists the researchers' reflection on their own biases as desirable, and having a language model analyse the data as an antipattern | Ralph 2020, Case Study standard | convention |
+| The community standard for case studies has 10 essential attributes, among them the chain of evidence, the units of analysis and the selection of the case | Ralph 2020, Case Study standard | convention |
+| The same standard lists the researchers' reflection on their own biases as essential, and using a large language model to analyse the data as an antipattern | Ralph 2020, Case Study standard | convention |
 | A sample of one is not a valid criticism of a case study; the point is a concept that transfers | Ralph 2020; Flyvbjerg 2006b | convention; argument |
 | The experience-report track asks for a take-home message, positive and negative observations, the authors' roles and limits, and quantitative results where possible | ICSE 2003 | convention, a conference call |
 | A failed project can make a good experience report; the project must be completed | USENIX 2010 | convention, a conference call |
@@ -66,12 +66,12 @@ Grades follow the repository's four: measured, supported with caveat, convention
 | Users' perceptions of productivity were set beside their usage data | Ziegler 2024 (secondary, abstract) | supported with caveat, the owner's study |
 | 456,535 pull requests by five agents in 61,453 repositories form a dataset; agent pull requests are accepted less often than human ones | Li 2025b, sections 1 and 3 | measured, descriptive |
 | 567 pull requests from one agent in 157 projects: 83.8% merged | Watanabe 2025 (secondary, abstract) | measured, descriptive |
-| 16 parallel agents, nearly 2,000 sessions, two weeks, about $20,000; commits not reported, human interventions not counted | Carlini 2026 (secondary) | owner's claim |
+| 16 agents wrote a C compiler over nearly 2,000 sessions and $20,000 in API costs; the post gives two weeks for a later run on another model, and no commit count | Carlini 2026 (secondary) | owner's claim |
 | Hundreds of agents on one project; locks and risk aversion cost throughput | Lin 2026 (secondary) | owner's claim |
-| A practitioner estimates agents run 10 to 20% of his day; all figures self-reported | Hashimoto 2026 (secondary) | practice, an example |
+| A practitioner says he is maybe effective at running a background agent 10 to 20% of a normal working day; all figures self-reported | Hashimoto 2026 (secondary) | practice, an example |
 
 - The two datasets of pull requests disagree on acceptance because they cover different populations.
-- Every measure here is per task, per pull request or per project. None counts the questions that reached a person in a day.
+- Most measures here are per task, per pull request or per project; the survey and the practitioner's estimate are not. None counts the questions that reached a person in a day.
 
 ## Strand E: grey sources as evidence
 

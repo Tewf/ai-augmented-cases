@@ -70,7 +70,7 @@ La revue est dans [evidence/case-reports](evidence/case-reports/) (en anglais) :
 
 - **Le nom du domaine diffère du nôtre.** Un rapport écrit par ceux qui ont participé est un **rapport d'expérience**, pas une étude de cas : la norme communautaire de l'étude de cas l'exclut. Un cas ici est un rapport d'expérience avec des mesures de dépôt, et le dit ([cadrage](evidence/case-reports/frame.md)).
 - **Un historique trompe de façons connues.** Un dépôt n'est pas un projet, les commits se déplacent et se réécrivent, et les gros commits n'ont pas la même intention. Dans le premier cas, 434 commits additionnés sur sept dépôts font 415 commits distincts, et 50 étiquettes font 6 publications sur l'hébergeur.
-- **Aucune étude ne compte ce que ce dépôt demande.** Les études sur les agents de code mesurent une tâche, une demande de fusion ou un projet ; les récits d'entreprises donnent sessions et coût. Aucune de la sélection ne compte les questions parvenues à une personne en une journée.
+- **Aucune étude ne compte ce que ce dépôt demande.** Les études sur les agents de code mesurent surtout une tâche, une demande de fusion ou un projet. Les récits d'entreprises donnent sessions et coût. Aucune de la sélection ne compte les questions parvenues à une personne en une journée.
 - **La confiance repose sur la convention.** Les guides sont bâtis sur d'autres guides et sur l'expérience ; aucune étude ne montre qu'une liste de contrôle rend un cas plus crédible. Le point faible de la liste pour un rapport de l'intérieur est la triangulation.
 
 ## La référence

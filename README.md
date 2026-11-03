@@ -70,7 +70,7 @@ The review is in [evidence/case-reports](evidence/case-reports/): 37 sources, 29
 
 - **The field's name differs from ours.** A report written by those who took part is an **experience report**, not a case study: the community standard for case studies excludes it. A case here is an experience report with repository measures, and says so ([frame](evidence/case-reports/frame.md)).
 - **A history misleads in known ways.** A repository is not a project, commits move and are rewritten, and large commits differ in intent. In the first case, 434 commits summed over seven repositories are 415 distinct, and 50 tags are 6 releases on the host.
-- **No study counts what this repository asks for.** Studies of coding agents measure a task, a pull request or a project; company write-ups report sessions and cost. None in the pool counts the questions that reached a person in a day.
+- **No study counts what this repository asks for.** Studies of coding agents mostly measure a task, a pull request or a project; company write-ups report sessions and cost. None in the pool counts the questions that reached a person in a day.
 - **Trust rests on convention.** The guidelines are built from other guidelines and experience; no study shows that a checklist makes a case more trusted. The checklist's weak item for a report from inside is triangulation.
 
 ## The baseline
