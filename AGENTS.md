@@ -1,11 +1,11 @@
 # Contributing to this repository
 
 For anyone changing this repository, person or language model. To apply the reader-ergonomics standard elsewhere,
-read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md); this file is about this repository only.
+read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md); this file is about this repository only.
 
 ## Before writing
 
-1. Read the standard at the release this repository checks against (v1.20.0), then this repository's card,
+1. Read the standard at the release this repository checks against (v1.21.0), then this repository's card,
    [standard.md](standard.md): six principles, three about counting and three about reporting, each with its grade and
    its check. Then the front page's scope: what is in, what is out, and which neighbour holds what is out.
 2. The first review is in [evidence/case-reports](evidence/case-reports/), in its five steps, and names the baseline.
@@ -45,7 +45,7 @@ the checks both skip:
 
 ```sh
 rm -rf checks/out/standard && mkdir -p checks/out/standard
-git -C ../reader-ergonomics archive 4f99372 | tar -x -C checks/out/standard   # the commit checks.yml pins
+git -C ../reader-ergonomics archive 2e5b6f0 | tar -x -C checks/out/standard   # the commit checks.yml pins
 python3 checks/out/standard/checks/run.py . --tiers program,meaning --judge flag   # the repository, as CI runs it
 READER_ERGONOMICS_CHECKS=checks/out/standard/checks python3 -m unittest discover -s checks   # the tests of checks/local/
 python3 checks/out/standard/checks/program/standard_card.py . --write   # rebuild the card's table and llms.txt after a principle changes
