@@ -3,6 +3,22 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [0.1.0] - 2026-11-03
+
+First release. What it holds:
+
+### Added
+
+- A first review of 37 sources on reporting a project run with the method, with its frame, protocol, sources, review,
+  case against, state of the art, position and baseline, and the shared bibliography.
+- A card of six principles in two groups, each with its grade and a check, and the shape of a case.
+- Five checks for the documents that link the shape, and 29 unit tests of them.
+- Two cases, the day of 2026-10-29 and the night of 2026-11-02, with `measures.py` that takes their counts from git
+  history, its 3 unit tests, and the counts it produced.
+- Three decision records, the checks workflow (unit tests, then the standard's checks, with a weekly syntax and
+  reference job) and the site workflow.
+- Pinned reader-ergonomics v1.19.2 (`b9732b9`), the same in both workflows.
+
 ## 2026-11-02
 
 ### Added

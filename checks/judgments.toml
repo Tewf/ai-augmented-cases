@@ -89,3 +89,10 @@ path = "standard.md"
 question = "the name 'standard' and the opening are far apart in meaning (0.13): does the name predict the content?"
 file = "02a93dde88c0"
 answer = "Yes: the file is this repository's card, as the family names it, and it opens on `The case-reporting standard` and how to report one project, then lists the principles."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "1fe2d73a2c9d"
+answer = "Il peut rester : son rôle est la page d'accueil, une phrase, `État`, `L'adopter` et la carte des parties, sans partie en double."

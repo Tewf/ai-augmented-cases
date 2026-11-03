@@ -10,14 +10,39 @@ celui-ci consigne ce qui s'est passé quand quelqu'un l'a fait.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; ses
-> constats sont six principes sur [une carte](standard.md), avec cinq vérifications et leurs tests ; deux cas
-> sont écrits avec un programme qui prend leurs comptes : la journée où six dépôts ont été bâtis à la fois, le
-> 2026-10-29, et la nuit où huit dépôts ont reçu leur premier travail, le 2026-11-02. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat
-> nouveau.
+> **État (2026-11-03) :** version 0.1.0. Construit : la première revue (une première passe, 37 sources) avec sa
+> référence nommée, six principes sur [une carte](standard.md), cinq vérifications et 32 tests unitaires, la forme d'un
+> cas, et deux cas avec un programme qui prend leurs comptes : la journée où six dépôts ont été bâtis à la fois, le
+> 2026-10-29, et la nuit où huit dépôts ont reçu leur premier travail, le 2026-11-02. Ouvert : il y a deux cas et aucun
+> témoin, les questions arrivées jusqu'à la personne sont comptées à la main, et le programme ne sait pas compter les
+> arrêts, les reprises ni les poussées. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue
+> par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
+
+## L'adopter
+
+Dix minutes, sans lire la revue. La forme générale est la section « Take your own version » de
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version) ; la voici pour écrire un cas.
+
+1. **Épingler la norme par son commit**, pour que ses vérifications ne changent pas sous vos pieds :
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+2. **Copier ce dont vous avez besoin, une fois :** la forme [shapes/case.md](shapes/case.md). Puis les cinq
+   vérifications de [checks/local/](checks/local/), avec leur aide `_cases.py`, dans le `checks/local/` de votre dépôt.
+   Enfin [measures.py](cases/2026-10-29-family-night/measures.py), qui prend les comptes d'une journée dans l'historique git. Les copies sont à vous. Notez le commit d'où vous les avez prises.
+3. **Configurer** avec un `checks/config.toml` qui étend la norme et recopie l'entrée `case` de
+   `[shape_conformance]` de [celui-ci](checks/config.toml) :
+
+   ```toml
+   extends = "reader-ergonomics"
+   ```
+
+4. **Écrire et lancer.** Mettez chaque cas dans `cases/<date>-<slug>/README.md` avec une ligne Shape qui renvoie à la
+   forme, prenez ses comptes avec `python3 measures.py --root DIR --day AAAA-MM-JJ`, puis lancez
+   `python3 reader-ergonomics/checks/run.py .`
+5. **Désaccord :** ouvrez une issue sur ce dépôt, avec la preuve. Une règle de la norme elle-même va aux issues de
+   reader-ergonomics ; une préférence de votre lecteur va dans un style de lecteur, comme dérogation.
 
 ## Où il se place
 
@@ -99,11 +124,11 @@ d'expérience, la liste du lecteur est suivie, et aucun modèle n'analyse les do
 ## Vérifier
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
 python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
 ```
 
-La CI exécute les mêmes vérifications à chaque push, et une exécution échoue à la première erreur
+La CI exécute d'abord les tests unitaires des vérifications et du programme de mesures, puis les mêmes vérifications, à chaque push, et une exécution échoue à la première erreur
 ([checks.yml](https://github.com/Tewf/ai-augmented-cases/blob/master/.github/workflows/checks.yml)). Chaque push sur
 master construit aussi le site, [tewf.github.io/ai-augmented-cases](https://tewf.github.io/ai-augmented-cases/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-cases/blob/master/.github/workflows/pages.yml)).

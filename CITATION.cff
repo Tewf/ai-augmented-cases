@@ -6,10 +6,12 @@ message: >-
   and not a new result.
 title: "ai-augmented-cases (work in progress)"
 abstract: >-
-  One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. Scope only; the first case, the day six repositories were built at once, is not written.
+  One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. A first review, a shape and two cases are written.
 type: software
 authors:
   - name: "Tewf"
+version: 0.1.0
+date-released: 2026-11-03
 repository-code: "https://github.com/Tewf/ai-augmented-cases"
 license:
   - Apache-2.0

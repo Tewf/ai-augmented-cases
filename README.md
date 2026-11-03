@@ -10,14 +10,38 @@ happened when someone did.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** the first review is written (a first pass, 37 sources) and names its baseline; its findings
-> are six principles on [a card](standard.md), with five checks and their tests; two cases
-> are written with a program that takes their counts: the day six repositories were built at once, 2026-10-29, and the
-> night eight repositories had their first job, 2026-11-02. The name
-> stays provisional. It is not an official standard, not a peer-reviewed study and not a new result.
+> **Status (2026-11-03):** version 0.1.0. Built: the first review (a first pass, 37 sources) with its baseline named,
+> six principles on [a card](standard.md), five checks and 32 unit tests, the shape of a case, and two cases with a
+> program that takes their counts: the day six repositories were built at once, 2026-10-29, and the night eight
+> repositories had their first job, 2026-11-02. Open: there are two cases and no control, the questions that reached the
+> person are counted by hand, and the program cannot count the stalls, the returns or the pushes. The name stays
+> provisional. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
+
+## Take it
+
+Ten minutes, without reading the review. The general form is reader-ergonomics'
+[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version); here it is for writing a case.
+
+1. **Pin the standard by commit**, so its checks do not change under you:
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+2. **Copy what you need, once:** the shape [shapes/case.md](shapes/case.md), the five checks in
+   [checks/local/](checks/local/) with their helper `_cases.py` into your repository's `checks/local/`, and
+   [measures.py](cases/2026-10-29-family-night/measures.py), the program that takes a day's counts from git history.
+   The copies are yours; note the commit you copied from.
+3. **Configure** with a `checks/config.toml` that extends the standard and copies the `[shape_conformance]` entry named
+   `case` from [this one](checks/config.toml):
+
+   ```toml
+   extends = "reader-ergonomics"
+   ```
+
+4. **Write and run.** Put each case in `cases/<date>-<slug>/README.md` with a Shape line linking the shape, take its
+   counts with `python3 measures.py --root DIR --day YYYY-MM-DD`, then run `python3 reader-ergonomics/checks/run.py .`
+5. **Disagree** by opening an issue on this repository, with the evidence. A rule of the standard itself goes to
+   reader-ergonomics' issues; a preference of your own reader goes in a reader style as an override.
 
 ## Where it sits
 
@@ -97,11 +121,11 @@ and [record 0003](decisions/0003-six-findings-became-principles.md) says which f
 ## Check it
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
 python3 reader-ergonomics/checks/run.py path/to/this/repository
 ```
 
-CI runs the same checks on every push, and a run fails on any error
+CI first runs the unit tests of the checks and of the measures program, then the same checks, on every push, and a run fails on any error
 ([checks.yml](https://github.com/Tewf/ai-augmented-cases/blob/master/.github/workflows/checks.yml)). Every push to
 master also renders the site, [tewf.github.io/ai-augmented-cases](https://tewf.github.io/ai-augmented-cases/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-cases/blob/master/.github/workflows/pages.yml)).
