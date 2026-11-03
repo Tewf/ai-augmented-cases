@@ -10,7 +10,8 @@ celui-ci consigne ce qui s'est passé quand quelqu'un l'a fait.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; deux cas
+> **État (2026-11-03) :** la première revue est écrite (une première passe, 37 sources) et nomme sa référence ; ses
+> constats sont six principes sur [une carte](standard.md), avec cinq vérifications et leurs tests ; deux cas
 > sont écrits avec un programme qui prend leurs comptes : la journée où six dépôts ont été bâtis à la fois, le
 > 2026-10-29, et la nuit où huit dépôts ont reçu leur premier travail, le 2026-11-02. Le nom reste provisoire. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat
 > nouveau.
@@ -86,6 +87,15 @@ La liste de contrôle du lecteur de Runeson 2009, 12 points, lue avec les critè
 - **Le second cas.** [La nuit du 2026-11-02](cases/2026-11-02-eight-first-jobs/README.md) : 33 commits sur huit dépôts, 16 fiches, aucune étiquette.
   6 décisions sont parvenues à la personne, comptées à la main, et 5 sessions ont calé sur un changement de réseau. Le programme ne peut compter ni les messages de la personne, ni les calages, ni les retours, ni les poussées.
 
+## La carte
+
+La [norme](standard.md) compte six principes. Trois portent sur le comptage : imprimer la réserve à côté du compte
+(mesuré, descriptif), le travail distinct plutôt que les commits bruts (mesuré, descriptif) et un compte à la main est
+marqué (convention). Trois portent sur le rapport, tous de convention : le rapport d'un participant est un retour
+d'expérience, la liste du lecteur est suivie, et aucun modèle n'analyse les données. La forme est
+[shapes/case.md](shapes/case.md) ; les programmes sont dans [checks/local/](checks/local/), et la
+[fiche 0003](decisions/0003-six-findings-became-principles.md) dit quels constats sont restés des constats.
+
 ## Vérifier
 
 ```sh
@@ -102,8 +112,11 @@ master construit aussi le site, [tewf.github.io/ai-augmented-cases](https://tewf
 
 | Partie | Résumé |
 |---|---|
+| [standard.md](standard.md) | la carte : six principes avec leurs niveaux de preuve et leurs vérifications |
+| [principles](principles/) | un fichier par principe : énoncé, niveau, preuve, vérification, ce qu'il demande, pourquoi, limites |
 | [evidence](evidence/) | la revue derrière ce dépôt et sa bibliographie |
-| [shapes](shapes/) | la forme d'un cas, tirée de la référence |
+| [shapes](shapes/) | la forme d'un cas, tirée de la référence, avec son tableau de mesures |
+| [checks](checks/) | la configuration, les réponses, et les programmes de `local/` avec leurs tests |
 | [cases](cases/) | un dossier par projet réel : le rapport, le programme qui prend ses comptes, et les nombres de son exécution |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 

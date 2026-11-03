@@ -5,11 +5,13 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 
 ## Before writing
 
-1. Read the standard at the release this repository checks against (v1.19.2), and the front page's scope: what is in,
-   what is out, and which neighbour holds what is out.
+1. Read the standard at the release this repository checks against (v1.19.2), then this repository's card,
+   [standard.md](standard.md): six principles, three about counting and three about reporting, each with its grade and
+   its check. Then the front page's scope: what is in, what is out, and which neighbour holds what is out.
 2. The first review is in [evidence/case-reports](evidence/case-reports/), in its five steps, and names the baseline.
    A case follows [shapes/case.md](shapes/case.md), is held to that baseline, and comes with a program that takes its
-   counts and a test. A count by hand is marked as such. The repository keeps its name; the frame says how the field's
+   counts, a test and the results of its day; `case-counts`, `case-distinct`, `case-hand-counts`, `case-genre` and
+   `case-analysis` in [checks/local/](checks/local/) check them. A count by hand is marked as such. The repository keeps its name; the frame says how the field's
    differs.
 3. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
    [decisions/](decisions/).
@@ -43,12 +45,15 @@ the checks both skip:
 rm -rf checks/out/standard && mkdir -p checks/out/standard
 git -C ../reader-ergonomics archive b9732b9 | tar -x -C checks/out/standard   # the commit checks.yml pins
 python3 checks/out/standard/checks/run.py . --tiers program,meaning --judge flag   # the repository, as CI runs it
+READER_ERGONOMICS_CHECKS=checks/out/standard/checks python3 -m unittest discover -s checks   # the tests of checks/local/
+python3 checks/out/standard/checks/program/standard_card.py . --write   # rebuild the card's table and llms.txt after a principle changes
 ```
 
 - Fix every error. Read every warning.
 - Answer the questions in `checks/out/needs-judgment.md` in `checks/judgments.toml`, each answer quoting in backticks
   a word or heading of its own file.
-- Keep [llms.txt](llms.txt), [README.md](README.md) and [README.fr.md](README.fr.md) in step.
+- Keep [README.md](README.md) and [README.fr.md](README.fr.md) in step. [llms.txt](llms.txt) and the table of the card are
+  generated from the principle files by the command above.
 - A pin raise goes in [CHANGELOG.md](CHANGELOG.md), not in decisions/.
 
 ## House conventions

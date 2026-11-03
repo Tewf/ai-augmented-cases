@@ -10,7 +10,8 @@ happened when someone did.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** the first review is written (a first pass, 37 sources) and names its baseline; two cases
+> **Status (2026-11-03):** the first review is written (a first pass, 37 sources) and names its baseline; its findings
+> are six principles on [a card](standard.md), with five checks and their tests; two cases
 > are written with a program that takes their counts: the day six repositories were built at once, 2026-10-29, and the
 > night eight repositories had their first job, 2026-11-02. The name
 > stays provisional. It is not an official standard, not a peer-reviewed study and not a new result.
@@ -85,6 +86,14 @@ The reader's checklist of Runeson 2009, 12 items, read with the experience-repor
 - **Comparison.** There is no control. A case is compared with the method's earlier cases, and with a contrast inside the case; the first case has no earlier one, and the second is compared with it only in kind.
 - **The second case.** [The night of 2026-11-02](cases/2026-11-02-eight-first-jobs/README.md): 33 commits over eight repositories, 16 records, no tags; 6 decisions reached the person and 5 owner runs stalled and were resumed, counted by hand. The program cannot count the person's messages, the stalls, the returns or the pushes.
 
+## The card
+
+The [standard](standard.md) holds six principles. Three are about counting: print the caution beside the count (measured,
+descriptive), distinct work over raw commits (measured, descriptive) and a hand count is marked (convention). Three are
+about reporting, all convention: a participant's report is an experience report, the reader's checklist is answered, and no
+model analyses the data. The shape is [shapes/case.md](shapes/case.md); the programs are in [checks/local/](checks/local/),
+and [record 0003](decisions/0003-six-findings-became-principles.md) says which findings stayed findings.
+
 ## Check it
 
 ```sh
@@ -101,8 +110,11 @@ master also renders the site, [tewf.github.io/ai-augmented-cases](https://tewf.g
 
 | Part | Summary |
 |---|---|
+| [standard.md](standard.md) | the card: six principles with their grades and checks |
+| [principles](principles/) | one file per principle: claim, grade, evidence, check, what it asks, why, limits |
 | [evidence](evidence/) | the review behind this repository and its bibliography |
-| [shapes](shapes/) | the shape of a case, derived from the baseline guideline |
+| [shapes](shapes/) | the shape of a case, derived from the baseline guideline, with its measures table |
+| [checks](checks/) | the config, the answers, and the programs of `local/` with their tests |
 | [cases](cases/) | one folder per real project: the report, the program that takes its counts, and the numbers of its run |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
