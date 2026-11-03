@@ -70,5 +70,40 @@ class Moves(unittest.TestCase):
         self.assertFalse(measures.is_move("decisions/0004-pin-a-release.md"))
 
 
+class Costs(unittest.TestCase):
+    BRIEF = "# Brief: x\n\n## Checks\n\n- `true`: passes.\n\n## Cost\n\n- Tokens: 1,200 tokens\n- Dollars: 0.5 dollars\n- Minutes: {m}\n- Produced: a page\n"
+
+    def folder(self, root, name, text):
+        d = Path(root) / name
+        d.mkdir()
+        if text is not None:
+            (d / "brief.md").write_text(text)
+        return str(d)
+
+    def test_numbers_are_read_and_pending_is_not_zero(self):
+        with tempfile.TemporaryDirectory() as root:
+            a = self.folder(root, "a", self.BRIEF.format(m="25 minutes"))
+            b = self.folder(root, "b", self.BRIEF.format(m="pending"))
+            c = self.folder(root, "c", "# Brief: y\n\n## Checks\n\n- `true`: ok.\n")
+            d = self.folder(root, "d", None)  # no brief.md: not a job
+            costs = measures.read_costs([a, b, c, d])
+            self.assertEqual(list(costs), ["a", "b", "c"])
+            self.assertEqual(costs["a"], {"Tokens": 1200.0, "Dollars": 0.5, "Minutes": 25.0, "Produced": "a page"})
+            self.assertIsNone(costs["b"]["Minutes"])
+            self.assertIsNone(costs["c"])
+            total = measures.sum_costs(costs)
+            self.assertEqual((total["minutes"], total["minutes_jobs"], total["tokens"], total["tokens_jobs"], total["jobs"]),
+                             (25.0, 1, 2400.0, 2, 3))
+
+    def test_the_table_gains_minutes_only_when_given(self):
+        per = {"r": {"commits": 1, "files": 1, "tags": [], "decisions": [], "moves": 0, "first": "10:00", "last": "10:00",
+                     "shared": 0, "carried": 0, "skew": 0}}
+        self.assertNotIn("minutes", measures.table(per))
+        lines = measures.table(per, 25.0).splitlines()
+        self.assertTrue(lines[0].endswith("| minutes |"))
+        self.assertTrue(lines[-1].endswith("| 25 |"))
+        self.assertEqual(lines[-1].count("|"), lines[0].count("|"))
+
+
 if __name__ == "__main__":
     unittest.main()

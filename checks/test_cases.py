@@ -128,6 +128,20 @@ class Counts(Case):
         self.assertTrue(any("summed" in m for m in self.messages(counts)))
 
 
+class Minutes(Case):
+    def test_costs_in_the_results_need_a_minutes_column(self):
+        self.write("results.json", json.dumps({**RESULTS, "costs": {"a": None}}))
+        self.assertTrue(any("Minutes column" in m for m in self.messages(counts)))
+
+    def test_a_minutes_column_passes(self):
+        self.write("results.json", json.dumps({**RESULTS, "costs": {"a": None}}))
+        self.page("| Carried |\n|---|---|---|---|\n| r | 12 | 0 | 2 |", "| Carried | Minutes |\n|---|---|---|---|---|\n| r | 12 | 0 | 2 | 25 |")
+        self.assertEqual(self.messages(counts), [])
+
+    def test_a_case_without_costs_is_not_asked_for_minutes(self):
+        self.assertEqual(self.messages(counts), [])
+
+
 class Distinct(Case):
     def test_missing_distinct_count_fails(self):
         self.page("10 distinct pairs", "ten pairs")

@@ -5,6 +5,7 @@ For each case (a document whose Shape line links shapes/case.md), a run with no 
 - the folder holds the results file of the case's day;
 - every repository in that results file carries the three cautions the program takes: shared, carried and skew;
 - the Results section holds a table with a Carried column, the caution that turns commits into distinct work;
+- when the results hold the Cost blocks of job briefs (a "costs" key), the same table has a Minutes column: the person's minutes;
 - the Results section states the total of commits the program summed, as the program printed it.
 It does not guarantee that the program is right (its test is), nor that the cautions suffice: a commit is not a unit
 of work, and no program can say so. Principle: print the caution beside the count.
@@ -49,6 +50,8 @@ def check(root: Path, config: dict) -> list[Finding]:
         header = next((row for row in body.splitlines() if row.lstrip().startswith("|") and "carried" in row.lower()), "")
         if not header:
             findings.append(Finding(NAME, readme, line or 1, "the Results hold no table with a Carried column: print the caution beside the count"))
+        if "costs" in results and header and "minutes" not in header.lower():
+            findings.append(Finding(NAME, readme, line or 1, "the results hold Cost blocks: add the person's minutes as a Minutes column"))
         if not has_number(body, int(results.get("summed", -1))):
             findings.append(Finding(NAME, readme, line or 1, f"the Results do not state the {results.get('summed')} commits the program summed"))
     return findings

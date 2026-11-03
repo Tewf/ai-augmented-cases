@@ -5,6 +5,11 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
+### Added
+
+- `measures.py --jobs` reads the Cost blocks of job briefs; the case table gains a Minutes column, asked for by
+  `case-counts` when the results hold costs; 3 tests of each ([record 0004](decisions/0004-the-persons-minutes-come-from-the-job-briefs.md)).
+
 ### Changed
 
 - Pinned reader-ergonomics v1.20.0 (`4f99372`), from v1.19.2 (`b9732b9`): the runner's verdicts file (`--out`), and hand-written llms.txt lines kept through a rebuild

@@ -3,6 +3,7 @@
 
 Usage:
     python3 measures.py --root DIR [--repos NAME ...] [--day 2026-10-29] [--offset +01:00] [--json FILE]
+                        [--jobs FOLDER ...]
 
 DIR holds a checkout of each repository named in REPOSITORIES, or in --repos, side by side.
 The program only reads: it runs `git log` and `git tag`, nothing else.
@@ -21,12 +22,18 @@ And three cautions the numbers carry, printed beside them:
                   where the hash differs (a history rewritten when it moved)
     skew          commits whose author day differs from their committer day
 
+With --jobs, it also reads the closing Cost block of each folder's brief.md (the brief shape of
+https://github.com/Tewf/ai-augmented-project, shapes/brief.md): the lines Tokens, Dollars, Minutes and Produced.
+A value that is a number with its unit is summed; `pending`, `not measured` or a missing block is counted as such
+and never as zero, so a total says how many jobs it covers.
+
 The hand count (hand-counts.csv) is read and tallied, not checked: a program
 cannot tell which questions reached a person.
 """
 import argparse
 import csv
 import json
+import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
@@ -162,17 +169,58 @@ def caught_by(rows):
     return Counter(r["caught_by"] for r in rows if r["kind"] == "error")
 
 
-def table(per):
+COST_LINE = re.compile(r"^\s*[-*]\s*\**(Tokens|Dollars|Minutes|Produced):\**\s*(.*?)\s*$")
+NUMBER = re.compile(r"^(\d[\d,]*(?:\.\d+)?)\s*\S")
+
+
+def read_cost(brief):
+    """The Cost block of one brief as {label: number or text}; None when the brief has no Cost part.
+
+    A label whose value is `pending`, `not measured` or has no number and unit is kept as None, so it is not summed as 0."""
+    text = Path(brief).read_text(encoding="utf-8")
+    block = re.search(r"^## Cost[ \t]*\n(.*?)(?=^## |\Z)", text, re.MULTILINE | re.DOTALL)
+    if not block:
+        return None
+    cost = {}
+    for line in block.group(1).splitlines():
+        found = COST_LINE.match(line)
+        if found:
+            label, value = found.groups()
+            number = NUMBER.match(value)
+            cost[label] = value if label == "Produced" else (float(number.group(1).replace(",", "")) if number else None)
+    return cost
+
+
+def read_costs(folders):
+    """{folder name: its Cost block, or None} for each job folder that holds a brief.md."""
+    return {Path(f).name: read_cost(Path(f) / "brief.md") for f in folders if (Path(f) / "brief.md").is_file()}
+
+
+def sum_costs(costs):
+    """Totals of Tokens, Dollars and Minutes over the jobs that recorded a number, and how many did."""
+    total = {}
+    for label in ("Tokens", "Dollars", "Minutes"):
+        values = [c[label] for c in costs.values() if c and c.get(label) is not None]
+        total[label.lower()] = sum(values)
+        total[label.lower() + "_jobs"] = len(values)
+    total["jobs"] = len(costs)
+    return total
+
+
+def table(per, minutes=None):
     head = ["repository", "commits", "files", "tags", "decisions", "moves", "first", "last", "shared", "carried", "skew"]
+    if minutes is not None:
+        head.append("minutes")
     lines = ["| " + " | ".join(head) + " |", "|" + "---|" * len(head)]
     for name, r in per.items():
         lines.append("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} |".format(
             name, r["commits"], r["files"], len(r["tags"]), len(r["decisions"]), r["moves"],
-            r["first"] or "-", r["last"] or "-", r["shared"], r["carried"], r["skew"]))
+            r["first"] or "-", r["last"] or "-", r["shared"], r["carried"], r["skew"]) + (" - |" if minutes is not None else ""))
     total = lambda k: sum(r[k] for r in per.values())
     lines.append("| all | {} | - | {} | {} | {} | - | - | {} | {} | {} |".format(
         total("commits"), sum(len(r["tags"]) for r in per.values()),
-        sum(len(r["decisions"]) for r in per.values()), total("moves"), total("shared"), total("carried"), total("skew")))
+        sum(len(r["decisions"]) for r in per.values()), total("moves"), total("shared"), total("carried"), total("skew"))
+        + (f" {minutes:g} |" if minutes is not None else ""))
     return "\n".join(lines)
 
 
@@ -183,12 +231,15 @@ def main(argv=None):
     ap.add_argument("--day", default="2026-10-29")
     ap.add_argument("--offset", default="+01:00", help="UTC offset that defines the day")
     ap.add_argument("--hand", default=str(Path(__file__).with_name("hand-counts.csv")))
+    ap.add_argument("--jobs", nargs="+", help="job folders whose brief.md closes with a Cost block")
     ap.add_argument("--json", help="also write the numbers to this file")
     args = ap.parse_args(argv)
     tz = parse_offset(args.offset)
     per, distinct, work = measure(args.root, args.day, tz, args.repos or REPOSITORIES)
     print(f"Day {args.day}, offset {args.offset}\n")
-    print(table(per))
+    costs = read_costs(args.jobs) if args.jobs else None
+    total_cost = sum_costs(costs) if costs is not None else None
+    print(table(per, total_cost["minutes"] if total_cost else None))
     total = sum(r["commits"] for r in per.values())
     print(f"\nCommits summed over repositories: {total}; distinct hashes: {distinct}; distinct (author time, subject): {work}.")
     for name, r in per.items():
@@ -196,6 +247,11 @@ def main(argv=None):
             print(f"tag {name} {tag} {when}")
         for d in r["decisions"]:
             print(f"decision {name} {d}")
+    if total_cost:
+        t = total_cost
+        print(f"\nCost blocks read in {t['jobs']} job briefs. Person's minutes: {t['minutes']:g} over {t['minutes_jobs']} jobs"
+              f" (the others: pending, not measured or no block). Tokens: {t['tokens']:g} over {t['tokens_jobs']}."
+              f" Dollars: {t['dollars']:g} over {t['dollars_jobs']}.")
     counts = {}
     if Path(args.hand).exists():
         counts, _ = hand_counts(args.hand)
@@ -204,7 +260,7 @@ def main(argv=None):
     if args.json:
         Path(args.json).write_text(json.dumps(
             {"day": args.day, "offset": args.offset, "repositories": per,
-             "summed": total, "distinct": distinct, "distinct_work": work, "hand": dict(counts), "errors_caught_by": dict(caught_by(hand_counts(args.hand)[1])) if counts else {}}, indent=2) + "\n")
+             "summed": total, "distinct": distinct, "distinct_work": work, "hand": dict(counts), **({"costs": costs, "cost_totals": total_cost} if costs is not None else {}), "errors_caught_by": dict(caught_by(hand_counts(args.hand)[1])) if counts else {}}, indent=2) + "\n")
     return 0
 
 

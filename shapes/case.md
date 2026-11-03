@@ -35,12 +35,13 @@ Its filled examples are the [first case](../cases/2026-10-29-family-night/README
 
 The Results part prints what the program took as a table of one form, so that every case reads alike and the check finds it.
 
-| Repository | Commits | Files | Tags | Records | First | Last | Carried |
-|---|---|---|---|---|---|---|---|
-| one row per repository | committer time on the day | distinct paths those commits touch | tags created on the day | decision records first added | first commit | last commit | commits that recur under another hash |
+| Repository | Commits | Files | Tags | Records | First | Last | Carried | Minutes |
+|---|---|---|---|---|---|---|---|---|
+| one row per repository | committer time on the day | distinct paths those commits touch | tags created on the day | decision records first added | first commit | last commit | commits that recur under another hash | the person's minutes, only in the last row |
 
 - A last row **all** sums the columns that add. Under the table, one line states the commits summed, the distinct pairs of author time and subject, and the pin or move records where the case has them.
 - The Carried column is required: it is the caution that turns a commit total into distinct work. Shared may stand beside it, as in the second case; shared and skew are in the results file and named in the prose when they are not zero.
+- Minutes is the person's minutes, summed by the program from the Cost blocks that close the job briefs (`measures.py --jobs`). It stays out of the table when the case has no such blocks. A job whose Cost is pending or not measured adds nothing, and the line under the table says how many jobs the sum covers, so a total is never read as complete.
 - A number taken by hand never enters this table; it follows it in a list, each item marked (by hand, n).
 - A day that crosses midnight gets a second table for the second day, with the columns it has.
 
