@@ -24,10 +24,10 @@ Cette page en anglais : [README.md](README.md). Les deux versions suivent le mê
 ## L'adopter
 
 Dix minutes, sans lire la revue. La forme générale est la section « Take your own version » de
-[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version) ; la voici pour écrire un cas.
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version) ; la voici pour écrire un cas.
 
 1. **Épingler la norme par son commit**, pour que ses vérifications ne changent pas sous vos pieds :
-   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copier ce dont vous avez besoin, une fois :** la forme [shapes/case.md](shapes/case.md). Puis les cinq
    vérifications de [checks/local/](checks/local/), avec leur aide `_cases.py`, dans le `checks/local/` de votre dépôt.
    Enfin [measures.py](cases/2026-10-29-family-night/measures.py), qui prend les comptes d'une journée dans l'historique git. Les copies sont à vous. Notez le commit d'où vous les avez prises.
@@ -74,7 +74,7 @@ digraph where_it_sits {
 
 - **Il mesure les membres :** un cas nomme la version de la méthode avec laquelle il a été mené, par commit, et dit si
   le raisonnement est passé par [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint), le pont.
-- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) et exécute ses vérifications en CI.
+- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) et exécute ses vérifications en CI.
 - **Il ne pointe que vers le bas.** [ai-augmented-foundations](https://github.com/Tewf/ai-augmented-foundations) lit les cas ;
   aucun cas n'en dépend. La carte de la famille est [ai-augmented](https://github.com/Tewf/ai-augmented).
 
@@ -124,7 +124,7 @@ d'expérience, la liste du lecteur est suivie, et aucun modèle n'analyse les do
 ## Vérifier
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372
 python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
 ```
 

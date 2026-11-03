@@ -2,7 +2,7 @@
 
 **Decision:** the card holds six principles: three about counting, whose grades are measured or convention, and three about reporting, all convention, each enforced by a program or by the standard's shape check. Findings the review graded without a rule a program can check stay in the review.
 
-**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/shapes/decision-record.md).
 
 ## Context
 

@@ -23,10 +23,10 @@ This page in French: [README.fr.md](README.fr.md).
 ## Take it
 
 Ten minutes, without reading the review. The general form is reader-ergonomics'
-[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version); here it is for writing a case.
+[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version); here it is for writing a case.
 
 1. **Pin the standard by commit**, so its checks do not change under you:
-   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copy what you need, once:** the shape [shapes/case.md](shapes/case.md), the five checks in
    [checks/local/](checks/local/) with their helper `_cases.py` into your repository's `checks/local/`, and
    [measures.py](cases/2026-10-29-family-night/measures.py), the program that takes a day's counts from git history.
@@ -73,7 +73,7 @@ digraph where_it_sits {
 
 - **It measures the members:** a case names the version of the method it was run with, by commit, and says whether
   the reasoning went through [reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint), the bridge.
-- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) and runs its checks in CI.
+- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) and runs its checks in CI.
 - **It links down only.** [ai-augmented-foundations](https://github.com/Tewf/ai-augmented-foundations) reads the cases; no
   case depends on it. The family's map is [ai-augmented](https://github.com/Tewf/ai-augmented).
 
@@ -121,7 +121,7 @@ and [record 0003](decisions/0003-six-findings-became-principles.md) says which f
 ## Check it
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372
 python3 reader-ergonomics/checks/run.py path/to/this/repository
 ```
 
