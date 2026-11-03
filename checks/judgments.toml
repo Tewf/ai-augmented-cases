@@ -96,3 +96,31 @@ path = "README.fr.md"
 question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "1fe2d73a2c9d"
 answer = "Il peut rester : son rôle est la page d'accueil, une phrase, `État`, `L'adopter` et la carte des parties, sans partie en double."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/case-reports/review.md"
+question = "reads about equally as explanation and reference: one mode per document?"
+file = "d5a0824d1fe1"
+answer = "It has one mode, a reading of the field: the title asks `what the field says`, and the tables are its reference while the bullets give its explanation."
+
+[[answer]]
+check = "name-content"
+path = "evidence/case-reports/position.md"
+question = "the name 'position' and the opening are far apart in meaning (0.12): does the name predict the content?"
+file = "3e3db0c2af3f"
+answer = "Yes: the closing heading `What this repository adds` says what the file holds, and the other headings list what is known and not found, so the name is backed by its sections."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "96c582da2e91"
+answer = "It stays whole: its role is the front page, with one sentence of status under `État` and the map of its parts, with no part repeated."
+
+[[answer]]
+check = "logical-lines"
+path = "evidence/case-reports/protocol.md"
+question = "123 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "136d8fa503f2"
+answer = "It stays whole: its one role is the record of how the pool was built, and sections 11 and 12 extend that record; splitting would separate the strings from the counts they produced, as `Forward citation` shows."

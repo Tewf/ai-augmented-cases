@@ -10,7 +10,7 @@ happened when someone did.
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** version 0.1.0. Built: the first review (a first pass, 37 sources) with its baseline named,
+> **Status (2026-11-03):** version 0.1.0. Built: the first review (a first pass, 42 sources) with its baseline named,
 > six principles on [a card](standard.md), five checks and 32 unit tests, the shape of a case, and two cases with a
 > program that takes their counts: the day six repositories were built at once, 2026-10-29, and the night eight
 > repositories had their first job, 2026-11-02. Open: there are two cases and no control, the questions that reached the
@@ -91,7 +91,7 @@ digraph where_it_sits {
 
 ## What the review found
 
-The review is in [evidence/case-reports](evidence/case-reports/): 37 sources, 29 formal and 8 grey, in the five steps.
+The review is in [evidence/case-reports](evidence/case-reports/): 42 sources, 34 formal and 8 grey, in the five steps.
 
 - **The field's name differs from ours.** A report written by those who took part is an **experience report**, not a case study: the community standard for case studies excludes it. A case here is an experience report with repository measures, and says so ([frame](evidence/case-reports/frame.md)).
 - **A history misleads in known ways.** A repository is not a project, commits move and are rewritten, and large commits differ in intent. In the first case, 434 commits summed over seven repositories are 415 distinct, and 50 tags are 6 releases on the host.

@@ -1,6 +1,6 @@
 # Case reports: how a report on one real project is written so that an absent reader can trust it
 
-A first-pass multivocal review of 37 sources: 29 formal and 8 grey. It asks how a participant writes a case with repository counts, and what those counts miss. It names its baseline.
+A first-pass multivocal review of 42 sources: 34 formal and 8 grey. It asks how a participant writes a case with repository counts, and what those counts miss. It names its baseline.
 
 - Formal: 7 read in full or in sections, 17 by abstract, 5 located only.
 - Grey: 8 read in part, all at or above 10 of 20; 2 tier 1 or 2 calls, 1 tier 1 book, 3 tier 3 posts.
@@ -38,4 +38,4 @@ A first-pass multivocal review of 37 sources: 29 formal and 8 grey. It asks how 
 
 ## Status
 
-A first pass: the five steps are written and the baseline is named. One reviewer; forward citation of the guideline and the leads listed in [protocol](protocol.md) are not done.
+A first pass: the five steps are written and the baseline is named. One reviewer; forward citation of three seed works was run (protocol section 11); the leads listed in [protocol](protocol.md) are not read.

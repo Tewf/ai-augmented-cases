@@ -10,7 +10,7 @@ celui-ci consigne ce qui s'est passé quand quelqu'un l'a fait.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** version 0.1.0. Construit : la première revue (une première passe, 37 sources) avec sa
+> **État (2026-11-03) :** version 0.1.0. Construit : la première revue (une première passe, 42 sources) avec sa
 > référence nommée, six principes sur [une carte](standard.md), cinq vérifications et 32 tests unitaires, la forme d'un
 > cas, et deux cas avec un programme qui prend leurs comptes : la journée où six dépôts ont été bâtis à la fois, le
 > 2026-10-29, et la nuit où huit dépôts ont reçu leur premier travail, le 2026-11-02. Ouvert : il y a deux cas et aucun
@@ -92,7 +92,7 @@ digraph where_it_sits {
 
 ## Ce que la revue a trouvé
 
-La revue est dans [evidence/case-reports](evidence/case-reports/) (en anglais) : 37 sources, 29 formelles et 8 grises, en cinq étapes.
+La revue est dans [evidence/case-reports](evidence/case-reports/) (en anglais) : 42 sources, 34 formelles et 8 grises, en cinq étapes.
 
 - **Le nom du domaine diffère du nôtre.** Un rapport écrit par ceux qui ont participé est un **rapport d'expérience**, pas une étude de cas : la norme communautaire de l'étude de cas l'exclut. Un cas ici est un rapport d'expérience avec des mesures de dépôt, et le dit ([cadrage](evidence/case-reports/frame.md)).
 - **Un historique trompe de façons connues.** Un dépôt n'est pas un projet, les commits se déplacent et se réécrivent, et les gros commits n'ont pas la même intention. Dans le premier cas, 434 commits additionnés sur sept dépôts font 415 commits distincts, et 50 étiquettes font 6 publications sur l'hébergeur.

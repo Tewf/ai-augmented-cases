@@ -1,6 +1,6 @@
 # Review: what the field says, by strand
 
-Step 2 of the review, read on 2026-11-02. Strand 0 holds existing reviews; A to E answer the questions of [frame](frame.md).
+Step 2 of the review, read on 2026-11-02; forward citations added on 2026-11-03. Strand 0 holds existing reviews; A to E answer the questions of [frame](frame.md).
 Grades follow the repository's four: measured, supported with caveat, convention, not supported. Sources are in [sources](sources.md).
 
 ## Strand 0: existing reviews
@@ -24,8 +24,11 @@ Grades follow the repository's four: measured, supported with caveat, convention
 | A failed project can make a good experience report; the project must be completed | USENIX 2010 | convention, a conference call |
 | Medicine reports one case by a 13-item checklist agreed by 27 people, with a timeline item | Gagnier 2013 | convention, by analogy |
 | Behavioural science reports a single-case design by a 26-item checklist | Tate 2016 | convention, by analogy |
+| Case studies in systematic reviews are often mislabelled: 76% of 79 primary studies were wrongly classed as case studies, so a reader cannot trust the label alone | Rainer 2024 (secondary, abstract) | measured, descriptive |
+| Papers on LLM-based software engineering rarely report their prompts; a 2026 guideline separates essential, desirable and exceptional items, from nearly 300 papers and a survey of 105 committee members | Korn 2026 (secondary, abstract) | measured, descriptive; the guideline is convention |
+| Qualitative software engineering guidelines ask for stronger reflexivity and for quality criteria borrowed from social science | Lenberg 2023 | convention, an argument and a literature survey |
 
-- The checklists of Runeson 2009 and the standard say what to report. None says how an author who took part in the case guards against his own reading; the standard asks only for reflection.
+- The checklists of Runeson 2009 and the standard say what to report. None says how an author who took part in the case guards against his own reading; the standard asks only for reflection. Lenberg 2023 recommends stronger reflexivity from qualitative methods, but its abstract gives no reporting checklist for it.
 - Kitchenham 1995 and Kitchenham 2002 are the earlier guidelines; both are cited by the later ones. Convention.
 - Stol 2018 places the case study among eight research strategies by obtrusiveness and generalizability. Convention.
 
@@ -69,9 +72,11 @@ Grades follow the repository's four: measured, supported with caveat, convention
 | 16 agents wrote a C compiler over nearly 2,000 sessions and $20,000 in API costs; the post gives two weeks for a later run on another model, and no commit count | Carlini 2026 (secondary) | owner's claim |
 | Hundreds of agents on one project; locks and risk aversion cost throughput | Lin 2026 (secondary) | owner's claim |
 | A practitioner says he is maybe effective at running a background agent 10 to 20% of a normal working day; all figures self-reported | Hashimoto 2026 (secondary) | practice, an example |
+| Acceptance depends on the task: 82.1% of documentation pull requests were accepted against 66.1% of new features, among 7,156 pull requests from five agents | Pinna 2026 (secondary, abstract) | measured, descriptive |
+| Copilot raised project-level contributions in open-source projects, but time to coordinate, review and integrate rose, and the gains fell unevenly between core and peripheral developers | Song 2026, abstract | measured, descriptive, from usage data |
 
-- The two datasets of pull requests disagree on acceptance because they cover different populations.
-- Most measures here are per task, per pull request or per project; the survey and the practitioner's estimate are not. None counts the questions that reached a person in a day.
+- The two datasets of pull requests disagree on acceptance because they cover different populations. Pinna 2026 adds a cause: the task mix alone moves acceptance by 16 percentage points between two task types.
+- Most measures here are per task, per pull request or per project; the survey and the practitioner's estimate are not. None counts the questions that reached a person in a day. Song 2026 comes closest: it measures the time that review and integration add, at project level.
 
 ## Strand E: grey sources as evidence
 

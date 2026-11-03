@@ -13,7 +13,7 @@ Step 4 of the review. It keeps "nobody has done this" apart from "we have not do
 
 | Gap | Said as | Grade |
 |---|---|---|
-| A guideline for a case written by an AI-assisted team about its own day | not found in 37 sources; not shown absent | supported with caveat |
+| A guideline for a case written by an AI-assisted team about its own day | not found in 42 sources; not shown absent | supported with caveat |
 | A measure of the questions that reached a person in a working day | not found in this pool; the company posts do not count interventions | supported with caveat |
 | A study of several agent sessions coordinated in one day | not found in this pool | supported with caveat |
 | A test that a checklist makes a case more trusted | not found | convention, untested |

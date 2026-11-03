@@ -25,7 +25,7 @@ The evidence against a rule or a reading, kept here and not deleted. Terms are i
 
 ## Against the review
 
-- One reviewer, 37 sources, 17 read by abstract and 5 located only.
+- One reviewer, 42 sources, 22 read by abstract and 5 located only.
 - The searches were few: four formal strings, of which one failed and one returned zero for a wrong query. Most formal works were recalled, which favours well-known work.
 - Web pages were read through a summary; their numbers are secondary.
 - A search for reviews of participant-written AI reports found none; that is a result of this search, not a claim about the world.
