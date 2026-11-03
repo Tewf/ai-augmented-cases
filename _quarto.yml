@@ -12,12 +12,15 @@ project:
 
 website:
   title: "AI-augmented cases"
+  description: "How to write a report on one real project run with the AI-augmented method, by what the review of case reports found: the shape of a case, six principles with their grades, and the checks that hold a case to them."
   site-url: "https://tewf.github.io/ai-augmented-cases/"
   repo-url: "https://github.com/Tewf/ai-augmented-cases"
   repo-actions: [source, issue]
   page-navigation: true
   navbar:
     left:
+      - text: Standard
+        href: standard.md
       - text: Evidence
         href: evidence/README.md
       - text: Shapes

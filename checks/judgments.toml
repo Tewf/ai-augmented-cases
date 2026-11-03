@@ -15,9 +15,9 @@ answer = "It stays: `decisions` is the folder the decision-record shape names fo
 [[answer]]
 check = "tree-shape"
 path = "shapes"
-question = "1 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
 file = ""
-answer = "It stays: `shapes` is the folder the extension layout names for the shapes of its genre; it holds the shape of a case today and grows with the genres the cases need."
+answer = "It stays: `shapes` is the folder the extension layout names for the shapes of its genre; it holds its `README.md` and the shape of a case, and grows with the genres the cases need."
 
 [[answer]]
 check = "logical-lines"
@@ -75,3 +75,17 @@ path = "cases/2026-11-02-eight-first-jobs/README.md"
 question = "104 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "ec94546d2ce9"
 answer = "It reports one night in the parts the case shape requires, so it stays whole: `Summary` first, `Results` and `Chain of evidence` in the middle, and `Rerun` last, as the first case does."
+
+[[answer]]
+check = "tree-shape"
+path = "principles"
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `principles` is the folder the extension contract names for the card's principle files, one group folder each for counting and reporting; the card's builder reads it there."
+
+[[answer]]
+check = "name-content"
+path = "standard.md"
+question = "the name 'standard' and the opening are far apart in meaning (0.13): does the name predict the content?"
+file = "02a93dde88c0"
+answer = "Yes: the file is this repository's card, as the family names it, and it opens on `The case-reporting standard` and how to report one project, then lists the principles."

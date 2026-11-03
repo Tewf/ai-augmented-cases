@@ -1,20 +1,29 @@
 # AI-augmented cases
 
-> One case per real project run with the AI-augmented method: what it cost and what it produced, measured where a program can measure it from the repository's history. A first-pass review names the baseline, a reader's checklist of Runeson 2009; the first case, the day six repositories were built at once, and the second, the night eight repositories had their first job, are written with a program that takes their counts.
+> How to write a report on one real project run with the AI-augmented method, by what the review of case reports found: the shape of a case, six principles with their grades, and the checks that hold a case to them.
 
-Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
+Each page's markdown source is served at the same path with a .md extension.
 
-## The repository
+## Standard
 
-- [AI-augmented cases](https://tewf.github.io/ai-augmented-cases/README.md): the scope, what the review found, the baseline and the questions answered
-- [Evidence](https://tewf.github.io/ai-augmented-cases/evidence/README.md): the review of how a report on one real project is written to be trusted, and its bibliography
-- [Case reports](https://tewf.github.io/ai-augmented-cases/evidence/case-reports/README.md): 37 sources, five steps, the baseline named
-- [Shape of a case](https://tewf.github.io/ai-augmented-cases/shapes/case.md): the parts of a case, derived from the baseline
-- [First case](https://tewf.github.io/ai-augmented-cases/cases/2026-10-29-family-night/README.md): the day six repositories were built at once
-- [Second case](https://tewf.github.io/ai-augmented-cases/cases/2026-11-02-eight-first-jobs/README.md): the night eight repositories had their first job
-- [Decisions](https://tewf.github.io/ai-augmented-cases/decisions/README.md): one record per choice that shapes the repository
-
-## Contributing
-
+- [Standard](https://tewf.github.io/ai-augmented-cases/standard.md): the one-page card to follow, with every principle and its grade
 - [Contributing](https://tewf.github.io/ai-augmented-cases/AGENTS.md): rules for changing this repository
-- [Standard](https://tewf.github.io/reader-ergonomics/standard.md): the reader-ergonomics card this repository obeys
+
+## Counting: what a program takes from a history, and how it is printed
+
+- [Print the caution beside the count](https://tewf.github.io/ai-augmented-cases/principles/counting/caution-beside-the-count.md): a count taken from a repository's history is printed by a program, with the program's cautions in columns beside it.
+- [Distinct work over raw commits](https://tewf.github.io/ai-augmented-cases/principles/counting/distinct-work-over-commits.md): a case states the distinct work behind its commit total, counted as distinct pairs of author time and subject, because a commit may recur under another hash.
+- [A hand count is marked](https://tewf.github.io/ai-augmented-cases/principles/counting/hand-counts-are-marked.md): a count taken by hand is marked as such in the page, listed row by row in a file, and equal to the tally the results record.
+
+## Reporting: how a report by its participants is made trustworthy
+
+- [Answer the reader's checklist](https://tewf.github.io/ai-augmented-cases/principles/reporting/answer-the-readers-checklist.md): a case holds a part for each of the 12 items of the reader's checklist of Runeson 2009, in a fixed order.
+- [No model analyses the data](https://tewf.github.io/ai-augmented-cases/principles/reporting/no-model-analyses-the-data.md): a case states that no language model analysed its data; a model may draft the prose, which a person reads before it counts.
+- [A participant's report is an experience report](https://tewf.github.io/ai-augmented-cases/principles/reporting/participants-write-experience-reports.md): a case written by those who took part names its genre, an experience report with repository measures, and the baseline it meets.
+
+## Optional
+
+- [Evidence](https://tewf.github.io/ai-augmented-cases/evidence/README.md): one literature review per topic, with the evidence against
+- [Bibliography](https://tewf.github.io/ai-augmented-cases/evidence/bibliography.md): every cited work, once
+- [Shapes](https://tewf.github.io/ai-augmented-cases/shapes/README.md): skeletons for kinds of documents
+- [Decisions](https://tewf.github.io/ai-augmented-cases/decisions/README.md): the choices this repository made, one record each
