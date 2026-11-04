@@ -6,7 +6,8 @@ For each case (a document whose Shape line links shapes/case.md), a run with no 
 - every repository in that results file carries the three cautions the program takes: shared, carried and skew;
 - the Results section holds a table with a Carried column, the caution that turns commits into distinct work;
 - when the results hold the Cost blocks of job briefs (a "costs" key), the same table has a Minutes column: the person's minutes;
-- the Results section states the total of commits the program summed, as the program printed it.
+- the Results section states the total of commits the program summed, as the program printed it;
+- when the case folder holds a job record (`jobs.toml`), the Results section states the total of minutes the record sums.
 It does not guarantee that the program is right (its test is), nor that the cautions suffice: a commit is not a unit
 of work, and no program can say so. Principle: print the caution beside the count.
 Exact. Time O(cases x size).
@@ -18,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from _cases import case_readmes, has_number, linked_file, results_of, section  # noqa: E402
+from _cases import case_readmes, has_figure, has_number, jobs_of, linked_file, minutes_total, results_of, section  # noqa: E402
 from framework.check_api import Finding  # noqa: E402
 
 NAME = "case-counts"
@@ -54,4 +55,19 @@ def check(root: Path, config: dict) -> list[Finding]:
             findings.append(Finding(NAME, readme, line or 1, "the results hold Cost blocks: add the person's minutes as a Minutes column"))
         if not has_number(body, int(results.get("summed", -1))):
             findings.append(Finding(NAME, readme, line or 1, f"the Results do not state the {results.get('summed')} commits the program summed"))
+        findings += record_findings(root, readme, body, line)
     return findings
+
+
+def record_findings(root: Path, readme: str, body: str, line: int) -> list[Finding]:
+    """Findings for the job record of a case: it parses, and the Results state the minutes it sums."""
+    try:
+        jobs = jobs_of(root, readme)
+    except ValueError as error:
+        return [Finding(NAME, readme, line or 1, f"jobs.toml is not valid TOML: {error}")]
+    if jobs is None:
+        return []
+    total, recorded = minutes_total(jobs)
+    if recorded and not has_figure(body, total):
+        return [Finding(NAME, readme, line or 1, f"the Results do not state the {total:g} minutes the job record sums over {recorded} jobs")]
+    return []

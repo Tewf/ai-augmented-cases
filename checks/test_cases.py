@@ -142,6 +142,57 @@ class Minutes(Case):
         self.assertEqual(self.messages(counts), [])
 
 
+JOBS = """[[job]]
+id = "a"
+minutes = 17
+
+[[job]]
+id = "b"
+minutes = 8.5
+
+[[job]]
+id = "c"
+"""
+
+
+class JobRecord(Case):
+    def test_a_case_without_a_job_record_is_not_asked_for_its_minutes(self):
+        self.assertEqual(self.messages(counts), [])
+
+    def test_the_total_of_the_record_must_be_stated(self):
+        self.write("jobs.toml", JOBS)
+        self.assertTrue(any("25.5 minutes" in m and "2 jobs" in m for m in self.messages(counts)))
+
+    def test_the_stated_total_passes(self):
+        self.write("jobs.toml", JOBS)
+        self.page("12 commits summed;", "12 commits summed; 25.5 minutes of the person;")
+        self.assertEqual(self.messages(counts), [])
+
+    def test_a_total_inside_a_longer_number_does_not_count(self):
+        self.write("jobs.toml", JOBS.replace("17", "13").replace("8.5", "8"))
+        self.page("12 commits summed;", "12 commits summed; 121 minutes;")
+        self.assertTrue(any("21 minutes" in m for m in self.messages(counts)))
+
+    def test_jobs_without_minutes_ask_for_nothing(self):
+        self.write("jobs.toml", '[[job]]\nid = "a"\n')
+        self.assertEqual(self.messages(counts), [])
+
+    def test_a_file_that_is_not_toml_fails(self):
+        self.write("jobs.toml", "[[job")
+        self.assertTrue(any("not valid TOML" in m for m in self.messages(counts)))
+
+    def test_the_reader_sums_only_what_was_recorded(self):
+        import _cases
+        self.assertEqual(_cases.minutes_total([{"minutes": 17}, {"minutes": 8.5}, {}]), (25.5, 2))
+        self.assertEqual(_cases.minutes_total([]), (0.0, 0))
+        self.assertIsNone(_cases.jobs_of(self.dir, "cases/2026-01-02-day/README.md"))
+
+    def test_the_reader_takes_a_file_the_exporter_wrote(self):
+        self.write("jobs.toml", '[[job]]\nid = "a"\ndate = "2026-11-04"\nwave = 0\ndepends_on = ["b"]\nminutes = 17\n')
+        import _cases
+        self.assertEqual(_cases.jobs_of(self.dir, "cases/2026-01-02-day/README.md")[0]["depends_on"], ["b"])
+
+
 class Distinct(Case):
     def test_missing_distinct_count_fails(self):
         self.page("10 distinct pairs", "ten pairs")

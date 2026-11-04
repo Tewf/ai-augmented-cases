@@ -242,3 +242,10 @@ path = "checks/config.toml"
 question = "changed together with decisions/0001-a-repository-of-its-own.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "5f1a9d82495d"
 answer = "They stay apart: `checks/config.toml` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with decisions/0001-a-repository-of-its-own.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "a5d86e8c0723"
+answer = "They stay apart: `CHANGELOG.md` records the releases and `decisions/0001-a-repository-of-its-own.md` is amended with them, which makes them change together by construction."

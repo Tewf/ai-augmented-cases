@@ -3,6 +3,13 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [Unreleased]
+
+### Added
+
+- `checks/local/_cases.py` reads a case's job record, `jobs.toml` (ai-augmented-project, shapes/job-record.md); `case-counts` asks the
+  Results to state the minutes it sums. 8 tests.
+
 ## [0.1.1] - 2026-11-04
 
 ### Added

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import tomllib
 from pathlib import Path
 
 from framework.check_api import files_in_scope, prose_only
@@ -49,6 +50,31 @@ def results_of(root: Path, readme: str) -> dict | None:
         if data.get("day") == day:
             return data
     return None
+
+
+def jobs_of(root: Path, readme: str) -> list[dict] | None:
+    """The `[[job]]` tables of the job record `jobs.toml` in the case's folder (ai-augmented-project, shapes/job-record.md).
+
+    None when the folder holds no such file; raises ValueError when the file is not valid TOML.
+    """
+    path = (root / readme).parent / "jobs.toml"
+    if not path.is_file():
+        return None
+    try:
+        return tomllib.loads(path.read_text(encoding="utf-8")).get("job", [])
+    except tomllib.TOMLDecodeError as error:
+        raise ValueError(str(error)) from error
+
+
+def minutes_total(jobs: list[dict]) -> tuple[float, int]:
+    """The sum of the minutes the jobs recorded, and how many jobs recorded them. A job without minutes adds nothing."""
+    values = [job["minutes"] for job in jobs if isinstance(job.get("minutes"), (int, float))]
+    return float(sum(values)), len(values)
+
+
+def has_figure(text: str, figure: float) -> bool:
+    """True when the figure stands in the text as a word of its own, written without a trailing zero (17, 17.5)."""
+    return re.search(rf"(?<![\d.,]){re.escape(f'{figure:g}')}(?![\d]|[.,]\d)", text) is not None
 
 
 def has_number(text: str, number: int) -> bool:
