@@ -5,16 +5,14 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
-### Changed
-
-- Pinned reader-ergonomics v1.24.2 (`65e4247`), from v1.21.0 (`2e5b6f0`): fixes that remove false findings in the sentence, term and figure checks, and `[defined_terms] cues`.
-
-## [Unreleased]
-
 ### Added
 
 - `checks/local/_cases.py` reads a case's job record, `jobs.toml` (ai-augmented-project, shapes/job-record.md); `case-counts` asks the
   Results to state the minutes it sums. 8 tests.
+
+### Changed
+
+- Pinned reader-ergonomics v1.24.2 (`65e4247`), from v1.21.0 (`2e5b6f0`): fixes that remove false findings in the sentence, term and figure checks, and `[defined_terms] cues`.
 
 ## [0.1.1] - 2026-11-04
 
