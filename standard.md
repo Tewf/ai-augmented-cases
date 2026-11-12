@@ -3,7 +3,7 @@
 How to report one real project run with the AI-augmented method, as far as the review of case reports goes.
 A case is written by the people who took part, with the counts a program can take from the history and the cautions
 that go beside them. It extends
-[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md):
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/standard.md):
 read that one first.
 
 This page adds only what a case changes. Its reader was absent from the project and decides whether the numbers can be trusted.
@@ -20,7 +20,7 @@ This page adds only what a case changes. Its reader was absent from the project 
    tests are in [checks/local/](checks/local/).
 
 Grades mean what they mean in
-[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md#grades):
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/standard.md#grades):
 measured, supported with caveat, convention, not supported. Each principle states its grade and never claims more.
 
 ## Principles
